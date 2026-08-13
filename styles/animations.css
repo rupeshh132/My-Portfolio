@@ -1,0 +1,167 @@
+/* Animations & Transitions */
+
+:root {
+  --ease-editorial: cubic-bezier(0.22, 1, 0.36, 1);
+  --reveal-y: 20px;
+  --reveal-y-small: 10px;
+}
+
+@media (max-width: 390px) {
+  :root {
+    --reveal-y: 12px;
+    --reveal-y-small: 8px;
+  }
+}
+
+/* Page transition overlay */
+.page-transition-overlay {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background-color: var(--bg-color);
+  z-index: 99999;
+  pointer-events: none;
+  opacity: 1;
+  transition: opacity 0.27s ease-in-out;
+}
+.page-loaded .page-transition-overlay {
+  opacity: 0;
+}
+
+/* Base Scroll Reveal (Standard Section Reveal) */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(var(--reveal-y));
+  transition: opacity 1.5s var(--ease-editorial), transform 1.5s var(--ease-editorial);
+}
+
+.scroll-reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Faded Editorial Text Section */
+.faded-statement .statement-line {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 1.6s var(--ease-editorial), transform 1.6s var(--ease-editorial);
+}
+.faded-statement.visible .statement-line {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Service Rows enter from 16px below */
+.service-row.scroll-reveal {
+  transform: translateY(16px);
+}
+.service-row.scroll-reveal.visible {
+  transform: translateY(0);
+}
+
+/* Stagger Delays for Grids and Rows */
+.stagger-1 { transition-delay: 0.1s; }
+.stagger-2 { transition-delay: 0.2s; }
+.stagger-3 { transition-delay: 0.3s; }
+.stagger-4 { transition-delay: 0.4s; }
+.stagger-5 { transition-delay: 0.5s; }
+.stagger-6 { transition-delay: 0.6s; }
+
+/* Home Hero Load Animations */
+.hero-title {
+  opacity: 0;
+  transform: translateY(var(--reveal-y));
+  animation: heroReveal 1.4s var(--ease-editorial) forwards;
+  animation-delay: 0.2s;
+}
+
+.hero-portrait {
+  opacity: 0;
+  transform: translateY(var(--reveal-y-small));
+  animation: heroReveal 1.6s var(--ease-editorial) forwards;
+  animation-delay: 1.0s;
+}
+
+.hero-sticker {
+  opacity: 0;
+  transform: translateY(var(--reveal-y-small));
+  animation: heroReveal 1.6s var(--ease-editorial) forwards;
+  animation-delay: 1.4s;
+}
+
+.hero-label {
+  opacity: 0;
+  transform: translateY(var(--reveal-y-small));
+  animation: heroReveal 1.2s var(--ease-editorial) forwards;
+  animation-delay: 1.4s;
+}
+
+@keyframes heroReveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Rolling Text Hover (Social / Menu / Buttons) */
+.rolling-text {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
+}
+
+.rolling-text-inner {
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.6s var(--ease-editorial);
+}
+
+.rolling-text:hover .rolling-text-inner {
+  transform: translateY(-100%);
+}
+
+.rolling-text-inner span {
+  display: block;
+}
+
+/* Social Icon Button Slide */
+.social-icon-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.social-icon-inner {
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.7s var(--ease-editorial);
+  position: absolute;
+  top: 0;
+}
+.btn-arrow:hover .social-icon-inner {
+  transform: translateY(-50%);
+}
+.social-icon-inner > span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+/* Ensure the container of social-icon-inner has a fixed height equal to the icon box */
+
+/* Prefers Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .scroll-reveal { transform: none !important; }
+  .hero-title, .hero-portrait, .hero-sticker, .hero-label { transform: none !important; }
+}

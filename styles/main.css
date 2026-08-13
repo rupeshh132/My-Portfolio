@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;800&display=swap');
+
+:root {
+  /* Colors */
+  --bg-color: rgb(250, 247, 243);
+  --ink: rgb(17, 17, 17);
+  --muted-ink: rgba(17, 17, 17, 0.5);
+  --border-color: rgba(0, 0, 0, 0.1);
+  --light-text: rgb(250, 247, 243);
+  --muted-light-text: rgba(250, 247, 243, 0.5);
+  --accent: rgb(235, 77, 109);
+
+  /* Typography Scales (Desktop Default) */
+  --font-massive: clamp(104px, 10vw, 150px);
+  --font-h1: clamp(64px, 6vw, 80px);
+  --font-h2: clamp(48px, 5vw, 64px);
+  --font-h3: clamp(28px, 3vw, 36px);
+  --font-statement: 44px;
+  --font-lead: 22px;
+  --font-body: 18px;
+  --font-small: 16px;
+
+  /* Spacing */
+  --gutter: 50px;
+  --max-width: 1180px;
+  
+  /* Radii */
+  --radius-lg: 20px;
+  --radius-md: 8px;
+}
+
+/* Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: 'Archivo', sans-serif;
+  color: var(--ink);
+  background-color: var(--bg-color);
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+}
+
+/* Noise overlay */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background-image: url('data:image/svg+xml,%3Csvg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="noiseFilter"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/%3E%3C/filter%3E%3Crect width="100%25" height="100%25" filter="url(%23noiseFilter)"/%3E%3C/svg%3E');
+  opacity: 0.04;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* Typography Base */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.massive-title {
+  font-size: var(--font-massive);
+  font-weight: 800;
+  line-height: 0.9;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.h1 { font-size: var(--font-h1); font-weight: 700; }
+.h2 { font-size: var(--font-h2); font-weight: 600; }
+.h3 { font-size: var(--font-h3); font-weight: 600; }
+.statement { font-size: var(--font-statement); font-weight: 600; line-height: 1.2; }
+.lead { font-size: var(--font-lead); font-weight: 600; }
+.body { font-size: var(--font-body); font-weight: 400; }
+.small { font-size: var(--font-small); font-weight: 400; }
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul { list-style: none; }
+
+/* Layout Structure */
+.container {
+  max-width: calc(var(--max-width) + (var(--gutter) * 2));
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+.section {
+  padding: 120px 0;
+}
+
+/* Responsive Overrides */
+@media (max-width: 810px) {
+  :root {
+    --gutter: 30px;
+    --font-statement: 36px;
+  }
+  .section { padding: 80px 0; }
+}
+
+@media (max-width: 390px) {
+  :root {
+    --gutter: 20px;
+    --font-statement: 28px;
+    --font-lead: 20px;
+  }
+  .section { padding: 60px 0; }
+}
