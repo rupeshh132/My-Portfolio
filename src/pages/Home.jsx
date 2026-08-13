@@ -110,7 +110,7 @@ const Home = () => {
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '60px' }}>
             <h2 className="h2 scroll-reveal">Featured Projects</h2>
             <a href="/work" className="btn-arrow dark scroll-reveal stagger-1">
-              <span className="rolling-text"><span className="rolling-text-inner"><span>View All Work</span><span>View All Work</span></span></span>
+              <span>View All Work</span>
               <div className="arrow-box">
                 <div className="arrow-inner">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -121,7 +121,7 @@ const Home = () => {
           
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', gap: '40px' }}>
             <a href="https://devlens-ai-pearl.vercel.app" target="_blank" rel="noreferrer" className="card scroll-reveal stagger-1">
-              <div className="card-img-wrapper" style={{ aspectRatio: '1.45/1', background: 'linear-gradient(135deg, #11998e 0%, #38ef7d 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '32px' }}>
+              <div className="card-img-wrapper" style={{ aspectRatio: '1.45/1', background: 'linear-gradient(135deg, #11998e 0%, #38ef7d 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '20px' }}>
                 <img src="/assets/devlens-ai.png" alt="DevLens AI" className="card-mockup" />
               </div>
               <div className="card-content" style={{ marginTop: '12px' }}>
@@ -131,7 +131,7 @@ const Home = () => {
             </a>
             
             <a href="https://jankalyan-coral.vercel.app" target="_blank" rel="noreferrer" className="card scroll-reveal stagger-2">
-              <div className="card-img-wrapper" style={{ aspectRatio: '1.45/1', background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '32px' }}>
+              <div className="card-img-wrapper" style={{ aspectRatio: '1.45/1', background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '20px' }}>
                 <img src="/assets/jankalyan.png" alt="JanKalyan" className="card-mockup" />
               </div>
               <div className="card-content" style={{ marginTop: '12px' }}>
@@ -141,7 +141,7 @@ const Home = () => {
             </a>
 
             <a href="#" className="card scroll-reveal stagger-3">
-              <div className="card-img-wrapper" style={{ aspectRatio: '1.45/1', background: 'linear-gradient(135deg, #ff758c 0%, #ff7eb3 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '32px' }}>
+              <div className="card-img-wrapper" style={{ aspectRatio: '1.45/1', background: 'linear-gradient(135deg, #ff758c 0%, #ff7eb3 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '20px' }}>
                 <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80" alt="Kavi" className="card-mockup" />
               </div>
               <div className="card-content" style={{ marginTop: '12px' }}>
@@ -151,7 +151,7 @@ const Home = () => {
             </a>
 
             <a href="#" className="card scroll-reveal stagger-4">
-              <div className="card-img-wrapper" style={{ aspectRatio: '1.45/1', background: 'linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '32px' }}>
+              <div className="card-img-wrapper" style={{ aspectRatio: '1.45/1', background: 'linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '20px' }}>
                 <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="PostWing" className="card-mockup" />
               </div>
               <div className="card-content" style={{ marginTop: '12px' }}>
@@ -263,7 +263,7 @@ const Home = () => {
             
             <a href="#" className="card scroll-reveal stagger-1" style={{ height: '460px' }}>
               <div className="card-img-wrapper" style={{ height: '100%', borderRadius: 'var(--radius-lg)' }}>
-                <img src="https://images.unsplash.com/photo-1455390582262-044cdead27d8?auto=format&fit=crop&w=800&q=80" alt="Blog 1" className="card-img" style={{ filter: 'grayscale(100%)' }} />
+                <img src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?auto=format&fit=crop&w=800&q=80" alt="Blog 1" className="card-img" style={{ filter: 'grayscale(100%)' }} />
                 <div style={{ position: 'absolute', bottom: 0, left: 0, width: '100%', padding: '32px 24px', background: 'linear-gradient(transparent, rgba(17,17,17,0.9))', color: 'var(--light-text)' }}>
                   <div className="small" style={{ color: 'var(--muted-light-text)', marginBottom: '8px' }}>Oct 12, 2026</div>
                   <h3 className="h3" style={{ marginBottom: '8px' }}>Building Trust Through Clear Design</h3>
@@ -289,7 +289,7 @@ const Home = () => {
               <h3 className="h3" style={{ color: 'var(--light-text)', position: 'relative', zIndex: 1 }}>See how we shape brands with clarity and craft— explore our blog</h3>
               
               <a href="/blog" className="btn-arrow light" style={{ position: 'relative', zIndex: 1, alignSelf: 'flex-start' }}>
-                <span className="rolling-text"><span className="rolling-text-inner"><span>Read Blog</span><span>Read Blog</span></span></span>
+                <span>Read Blog</span>
                 <div className="arrow-box">
                   <div className="arrow-inner">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -308,49 +308,24 @@ const Home = () => {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', gap: '60px' }}>
             
             <div>
-              <h2 className="massive-title scroll-reveal" style={{ textAlign: 'left', fontSize: 'var(--font-h1)', marginBottom: '24px' }}>Let's talk.</h2>
+              <h2 className="scroll-reveal" style={{ textAlign: 'left', fontSize: 'clamp(56px, 7vw, 96px)', fontWeight: 800, letterSpacing: '-0.04em', lineHeight: 1, marginBottom: '24px' }}>Let's talk.</h2>
               <p className="body scroll-reveal stagger-1" style={{ color: 'var(--muted-ink)', marginBottom: '40px' }}>Support line: +91 8090683207</p>
               
-              <div style={{ display: 'flex', gap: '16px' }}>
-                <a href="https://github.com/rupeshh132" target="_blank" rel="noreferrer" className="btn-arrow dark scroll-reveal stagger-1" aria-label="GitHub">
-                  <div className="arrow-box">
-                    <div className="social-icon-wrapper">
-                      <div className="social-icon-inner">
-                        <span>GH</span>
-                        <span>GH</span>
-                      </div>
-                    </div>
-                  </div>
+              <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
+                <a href="https://github.com/rupeshh132" target="_blank" rel="noreferrer" className="social-icon github scroll-reveal stagger-1" aria-label="GitHub">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path fillRule="evenodd" clipRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                  </svg>
                 </a>
-                <a href="https://www.linkedin.com/in/rupesh-vishwakarma-10a904225/" target="_blank" rel="noreferrer" className="btn-arrow dark scroll-reveal stagger-2" aria-label="LinkedIn">
-                  <div className="arrow-box">
-                    <div className="social-icon-wrapper">
-                      <div className="social-icon-inner">
-                        <span>IN</span>
-                        <span>IN</span>
-                      </div>
-                    </div>
-                  </div>
+                <a href="https://www.linkedin.com/in/rupesh-vishwakarma-10a904225/" target="_blank" rel="noreferrer" className="social-icon linkedin scroll-reveal stagger-2" aria-label="LinkedIn">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                  </svg>
                 </a>
-                <a href="https://leetcode.com/u/rupeshh132/" target="_blank" rel="noreferrer" className="btn-arrow dark scroll-reveal stagger-3" aria-label="LeetCode">
-                  <div className="arrow-box">
-                    <div className="social-icon-wrapper">
-                      <div className="social-icon-inner">
-                        <span>LC</span>
-                        <span>LC</span>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-                <a href="#" target="_blank" rel="noreferrer" className="btn-arrow dark scroll-reveal stagger-4" aria-label="X (Twitter)">
-                  <div className="arrow-box">
-                    <div className="social-icon-wrapper">
-                      <div className="social-icon-inner">
-                        <span>X</span>
-                        <span>X</span>
-                      </div>
-                    </div>
-                  </div>
+                <a href="https://leetcode.com/u/rupeshh132/" target="_blank" rel="noreferrer" className="social-icon leetcode scroll-reveal stagger-3" aria-label="LeetCode">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125 1.91 5.345 5.345 0 0 0 1.258 2.768l.2.214s0 .001.001.002l1.97 2.115 2.138 2.296 2.134 2.292a1.373 1.373 0 0 0 2.378-1.077 1.372 1.372 0 0 0-.411-.912l-2.023-2.173-2.134-2.292-1.927-2.069a2.532 2.532 0 0 1-.617-1.326 2.529 2.529 0 0 1 .059-.955 2.535 2.535 0 0 1 .59-1.01l4.032-4.318c.253-.27.502-.544.757-.812 1.31-1.379 2.62-2.756 3.931-4.136a1.373 1.373 0 0 0 .399-.959 1.37 1.37 0 0 0-.422-.976A1.376 1.376 0 0 0 13.483 0zm-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382 1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382 1.38 1.38 0 0 0-1.38-1.382H10.617z"/>
+                  </svg>
                 </a>
               </div>
             </div>
@@ -370,7 +345,7 @@ const Home = () => {
                   <textarea id="project" className="form-input" rows="4" required style={{ resize: 'vertical' }}></textarea>
                 </div>
                 <button type="submit" className="btn-submit" disabled={formStatus === 'Sending...'}>
-                  <span className="rolling-text"><span className="rolling-text-inner"><span>{formStatus}</span><span>{formStatus}</span></span></span>
+                  <span>{formStatus}</span>
                 </button>
               </form>
             </div>

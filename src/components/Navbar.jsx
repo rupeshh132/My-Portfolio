@@ -24,17 +24,17 @@ const Navbar = () => {
         </div>
         <div className="nav-menu">
           <Link to="/" className="nav-link" onClick={closeMenu}>
-            <span className="rolling-text"><span className="rolling-text-inner"><span>Home</span><span>Home</span></span></span>
+            Home
           </Link>
           <Link to="/work" className="nav-link" onClick={closeMenu}>
-            <span className="rolling-text"><span className="rolling-text-inner"><span>Works</span><span>Works</span></span></span>
+            Works
           </Link>
           <Link to="/blog" className="nav-link" onClick={closeMenu}>
-            <span className="rolling-text"><span className="rolling-text-inner"><span>Blog</span><span>Blog</span></span></span>
+            Blog
           </Link>
-          <a href="/#contact" className="nav-link" onClick={closeMenu}>
-            <span className="rolling-text"><span className="rolling-text-inner"><span>Contact</span><span>Contact</span></span></span>
-          </a>
+          <Link to="/contact" className="nav-link" onClick={closeMenu}>
+            Contact
+          </Link>
         </div>
       </nav>
     </div>
