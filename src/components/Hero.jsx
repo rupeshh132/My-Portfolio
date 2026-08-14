@@ -55,8 +55,9 @@ const Hero = () => {
         position: 'sticky',
         top: 0,
         height: '100vh',
-        overflow: 'hidden',   // clips image as it moves — safe on the sticky el itself
+        overflow: 'hidden',
         zIndex: 2,
+        pointerEvents: 'none',  // CRITICAL: don't block clicks on intro section below
       }}>
 
         {/* ── Large editorial heading ── */}
@@ -131,7 +132,7 @@ const Hero = () => {
         height: '100vh',
         display: 'flex',
         alignItems: 'center',
-        zIndex: 1,
+        zIndex: 3,
       }}>
         <div className="container" style={{ width: '100%' }}>
           <div style={{
