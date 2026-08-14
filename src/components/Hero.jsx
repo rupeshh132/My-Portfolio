@@ -150,7 +150,7 @@ const Hero = () => {
               </p>
               {/* Download CV */}
               <a
-                href="/assets/Rupesh_Vishwakarma_Resume newone.pdf"
+                href="/assets/Rupesh_Vishwakarma_Resume%20newone.pdf"
                 download="Rupesh_Vishwakarma_Resume.pdf"
                 style={{
                   display: 'inline-flex',
