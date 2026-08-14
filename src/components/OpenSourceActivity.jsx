@@ -1,5 +1,5 @@
 import React from 'react';
-import GitHubCalendar from 'react-github-calendar';
+import { GitHubCalendar } from 'react-github-calendar';
 import LeetCodeStats from './LeetCodeStats';
 
 const GITHUB_USERNAME = 'rupeshh132';
