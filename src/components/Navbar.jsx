@@ -9,13 +9,21 @@ const Navbar = () => {
 
   const closeMenu = () => setIsOpen(false);
 
+  const handleScrollToTop = (e) => {
+    if (location.pathname === '/') {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    closeMenu();
+  };
+
   return (
     <div className="navbar-wrapper">
       <nav className={`navbar ${isOpen ? 'open' : ''}`} id="main-nav">
-        <Link to="/" className="nav-logo" onClick={closeMenu}>Rupesh</Link>
+        <Link to="/" className="nav-logo" onClick={handleScrollToTop}>Rupesh</Link>
         
         <div className="nav-menu">
-          <Link to="/" className="nav-link" onClick={closeMenu}>
+          <Link to="/" className="nav-link" onClick={handleScrollToTop}>
             Home
           </Link>
           <Link to="/work" className="nav-link" onClick={closeMenu}>
