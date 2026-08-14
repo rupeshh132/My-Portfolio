@@ -148,6 +148,35 @@ const Hero = () => {
               <p className="lead">
                 I'm Rupesh, a passionate Full Stack Engineer focused on building scalable, modern web applications.
               </p>
+              {/* Download CV */}
+              <a
+                href="/assets/Rupesh_Vishwakarma_Resume newone.pdf"
+                download="Rupesh_Vishwakarma_Resume.pdf"
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '10px',
+                  marginTop: '28px',
+                  padding: '13px 24px',
+                  background: 'var(--ink)',
+                  color: 'var(--light-text)',
+                  borderRadius: '100px',
+                  fontSize: '14px',
+                  fontWeight: 700,
+                  textDecoration: 'none',
+                  letterSpacing: '0.02em',
+                  transition: 'background 0.25s, transform 0.2s',
+                }}
+                onMouseEnter={e => { e.currentTarget.style.background = '#333'; e.currentTarget.style.transform = 'translateY(-2px)'; }}
+                onMouseLeave={e => { e.currentTarget.style.background = 'var(--ink)'; e.currentTarget.style.transform = 'translateY(0)'; }}
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                  <polyline points="7 10 12 15 17 10"/>
+                  <line x1="12" y1="15" x2="12" y2="3"/>
+                </svg>
+                Download CV
+              </a>
             </div>
 
             {/* Centre spacer — image lands here */}

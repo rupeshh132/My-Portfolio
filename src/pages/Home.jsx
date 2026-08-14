@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import Hero from '../components/Hero';
 import StatementReveal from '../components/StatementReveal';
+import Journey from '../components/Journey';
+import Certifications from '../components/Certifications';
+import OpenSourceActivity from '../components/OpenSourceActivity';
 
 const Home = () => {
   const [formStatus, setFormStatus] = useState('Submit Inquiry');
@@ -162,6 +165,15 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      {/* Journey */}
+      <Journey />
+
+      {/* Certifications */}
+      <Certifications />
+
+      {/* Open Source Activity */}
+      <OpenSourceActivity />
 
       {/* Testimonials */}
       <section className="section">
