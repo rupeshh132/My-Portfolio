@@ -41,8 +41,8 @@ const HorizontalProjects = () => {
   });
 
   // Map vertical scroll (0 to 1) to horizontal movement
-  // -75% ensures the last card comes into view cleanly when there are 4 cards
-  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-75%"]);
+  // calc(-100% + 100vw) ensures the sliding track stops exactly when its right edge hits the right edge of the screen.
+  const x = useTransform(scrollYProgress, [0, 1], ["0%", "calc(-100% + 100vw)"]);
 
   return (
     <section ref={targetRef} style={{ height: "400vh", position: "relative" }}>
@@ -57,21 +57,21 @@ const HorizontalProjects = () => {
         backgroundColor: "var(--bg-color)" 
       }}>
         
-        {/* Section Header (Stays fixed left during scroll) */}
-        <div style={{ position: 'absolute', top: '10%', left: '5%', zIndex: 10 }}>
-          <h2 className="h2">Featured Projects</h2>
-          <a href="/work" className="btn-arrow dark" style={{ marginTop: '24px' }}>
-            <span>View All Work</span>
-            <div className="arrow-box">
-              <div className="arrow-inner">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </div>
-            </div>
-          </a>
-        </div>
-
         {/* The horizontally moving track */}
-        <motion.div style={{ x, display: "flex", gap: "60px", paddingLeft: "5%", paddingRight: "5%", alignItems: "center" }}>
+        <motion.div style={{ x, display: "flex", gap: "60px", paddingLeft: "5%", paddingRight: "5%", alignItems: "center", height: "100%" }}>
+          
+          {/* Section Header (Now acts as the first "slide") */}
+          <div style={{ flexShrink: 0, width: "clamp(300px, 30vw, 500px)", paddingRight: "40px" }}>
+            <h2 className="h2" style={{ fontSize: "clamp(48px, 6vw, 80px)", lineHeight: 1, margin: 0 }}>Featured Projects</h2>
+            <a href="/work" className="btn-arrow dark" style={{ marginTop: '32px' }}>
+              <span>View All Work</span>
+              <div className="arrow-box">
+                <div className="arrow-inner">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </div>
+              </div>
+            </a>
+          </div>
           {projects.map((project, idx) => (
             <div key={idx} style={{ width: "80vw", maxWidth: "900px", flexShrink: 0, position: 'relative' }}>
               <a href={project.link} target="_blank" rel="noreferrer" className="card" style={{ display: 'block' }}>
