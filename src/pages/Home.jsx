@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Hero from '../components/Hero';
 import StatementReveal from '../components/StatementReveal';
 import Journey from '../components/Journey';
-import Certifications from '../components/Certifications';
+import StackedCertifications from '../components/StackedCertifications';
 import OpenSourceActivity from '../components/OpenSourceActivity';
 import ServicesList from '../components/ServicesList';
 import HorizontalProjects from '../components/HorizontalProjects';
@@ -86,7 +86,7 @@ const Home = () => {
       <Journey />
 
       {/* Certifications */}
-      <Certifications />
+      <StackedCertifications />
 
       {/* Open Source Activity */}
       <OpenSourceActivity />
