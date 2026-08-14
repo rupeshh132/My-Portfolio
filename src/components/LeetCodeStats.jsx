@@ -27,10 +27,10 @@ const LeetCodeStats = () => {
   }, []);
 
   const statItems = stats ? [
-    { label: 'Total Solved', value: stats.totalSolved, color: '#ffa800', bg: '#fff8e6' },
-    { label: 'Easy', value: stats.easySolved, color: '#00b8a3', bg: '#e6faf8' },
-    { label: 'Medium', value: stats.mediumSolved, color: '#ffc01e', bg: '#fff9e0' },
-    { label: 'Hard', value: stats.hardSolved, color: '#ef4743', bg: '#fdf0f0' },
+    { label: 'Total Solved', value: stats.totalSolved, color: '#ffa800', bg: 'rgba(255,255,255,0.03)', border: 'rgba(255,168,0,0.2)' },
+    { label: 'Easy', value: stats.easySolved, color: '#00b8a3', bg: 'rgba(255,255,255,0.03)', border: 'rgba(0,184,163,0.2)' },
+    { label: 'Medium', value: stats.mediumSolved, color: '#ffc01e', bg: 'rgba(255,255,255,0.03)', border: 'rgba(255,192,30,0.2)' },
+    { label: 'Hard', value: stats.hardSolved, color: '#ef4743', bg: 'rgba(255,255,255,0.03)', border: 'rgba(239,71,67,0.2)' },
   ] : [];
 
   return (
@@ -46,7 +46,7 @@ const LeetCodeStats = () => {
           </svg>
         </div>
         <div>
-          <div style={{ fontWeight: 700, fontSize: '16px', color: 'var(--ink)' }}>LeetCode</div>
+          <div style={{ fontWeight: 700, fontSize: '16px', color: 'var(--light-text)' }}>LeetCode</div>
           <a href="https://leetcode.com/u/rupeshh132/" target="_blank" rel="noreferrer"
             style={{ fontSize: '13px', color: '#ffa800', textDecoration: 'none', fontWeight: 600 }}>
             @rupeshh132 ↗
@@ -65,6 +65,7 @@ const LeetCodeStats = () => {
           {statItems.map((item, i) => (
             <div key={i} style={{
               background: item.bg,
+              border: `1px solid ${item.border}`,
               borderRadius: '12px',
               padding: '14px 12px',
               textAlign: 'center',
@@ -72,7 +73,7 @@ const LeetCodeStats = () => {
               <div style={{ fontSize: 'clamp(20px, 2.5vw, 28px)', fontWeight: 800, color: item.color, lineHeight: 1 }}>
                 {item.value}
               </div>
-              <div style={{ fontSize: '11px', fontWeight: 600, color: 'rgba(17,17,17,0.5)', marginTop: '4px', letterSpacing: '0.04em', textTransform: 'uppercase' }}>
+              <div style={{ fontSize: '11px', fontWeight: 600, color: 'rgba(250,247,243,0.6)', marginTop: '4px', letterSpacing: '0.04em', textTransform: 'uppercase' }}>
                 {item.label}
               </div>
             </div>

@@ -137,7 +137,10 @@ ul { list-style: none; }
 }
 
 .navbar {
-  background-color: var(--ink);
+  background-color: rgba(5, 5, 5, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   color: var(--light-text);
   width: 200px;
   height: 56px;
