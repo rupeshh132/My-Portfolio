@@ -151,6 +151,8 @@ const Hero = () => {
               {/* Download CV */}
               <a
                 href="/assets/Rupesh_Vishwakarma_Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
                 download="Rupesh_Vishwakarma_Resume.pdf"
                 style={{
                   display: 'inline-flex',
