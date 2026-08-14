@@ -75,7 +75,7 @@ A well-architected monolith will always outperform a poorly orchestrated microse
     date: "Sep 05, 2026",
     title: "FarmChain: Empowering Farmers with AI and Data Transparency",
     description: "My vision for an AgriTech platform that combines Machine Learning with market transparency.",
-    image: "https://images.unsplash.com/photo-1586771107584-568c56ea5e3c?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1500937386664-56d1dfef4bc1?auto=format&fit=crop&w=800&q=80",
     content: `
 Technology should solve real-world problems. **FarmChain** is an AgriTech concept I am developing to bridge the information gap for farmers, ensuring they get the right advice and the right price.
 

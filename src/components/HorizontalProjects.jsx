@@ -27,7 +27,7 @@ const projects = [
     title: "FarmChain",
     category: "AgriTech / ML Crop Forecasting",
     gradient: "linear-gradient(135deg, #2b5876 0%, #4e4376 100%)",
-    image: "https://images.unsplash.com/photo-1586771107584-568c56ea5e3c?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1500937386664-56d1dfef4bc1?auto=format&fit=crop&w=800&q=80",
     link: "#"
   }
 ];
