@@ -144,7 +144,7 @@ const ServicesList = () => {
                     transition={{ duration: 0.3, delay: 0.1 }}
                     style={{ 
                       margin: '24px 0 0 0', 
-                      color: 'var(--light-text)', 
+                      color: 'var(--ink)', 
                       fontSize: '18px',
                       maxWidth: '800px',
                       lineHeight: 1.5,
