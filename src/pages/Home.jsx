@@ -4,6 +4,7 @@ import StatementReveal from '../components/StatementReveal';
 import Journey from '../components/Journey';
 import Certifications from '../components/Certifications';
 import OpenSourceActivity from '../components/OpenSourceActivity';
+import ServicesList from '../components/ServicesList';
 
 const Home = () => {
   const [formStatus, setFormStatus] = useState('Submit Inquiry');
@@ -73,37 +74,7 @@ const Home = () => {
       <section className="section">
         <div className="container">
           <h2 className="h2 scroll-reveal" style={{ marginBottom: '60px' }}>Services</h2>
-          <div className="services-list" style={{ borderTop: '1px solid var(--border-color)' }}>
-            
-            <div className="service-row scroll-reveal stagger-1" style={{ padding: '32px 0', borderBottom: '1px solid var(--border-color)', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '16px' }}>
-              <div className="h3">Full-Stack Development</div>
-              <div className="small" style={{ color: 'var(--muted-ink)', fontWeight: 600 }}>
-                React.js &bull; Spring Boot &bull; PostgreSQL
-              </div>
-            </div>
-            
-            <div className="service-row scroll-reveal stagger-2" style={{ padding: '32px 0', borderBottom: '1px solid var(--border-color)', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '16px' }}>
-              <div className="h3">AI Integration</div>
-              <div className="small" style={{ color: 'var(--muted-ink)', fontWeight: 600 }}>
-                AI Features &bull; Resume Analysis &bull; Interview Bots
-              </div>
-            </div>
-            
-            <div className="service-row scroll-reveal stagger-3" style={{ padding: '32px 0', borderBottom: '1px solid var(--border-color)', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '16px' }}>
-              <div className="h3">Frontend Architecture</div>
-              <div className="small" style={{ color: 'var(--muted-ink)', fontWeight: 600 }}>
-                Modern UI &bull; Tailwind CSS &bull; Framer Motion
-              </div>
-            </div>
-
-            <div className="service-row scroll-reveal stagger-4" style={{ padding: '32px 0', borderBottom: '1px solid var(--border-color)', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '16px' }}>
-              <div className="h3">API Design & Backend</div>
-              <div className="small" style={{ color: 'var(--muted-ink)', fontWeight: 600 }}>
-                Scalable APIs &bull; Security &bull; Database Management
-              </div>
-            </div>
-
-          </div>
+          <ServicesList />
         </div>
       </section>
 
