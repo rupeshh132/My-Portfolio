@@ -17,17 +17,17 @@ const projects = [
     link: "https://jankalyan-coral.vercel.app"
   },
   {
-    title: "AI Portfolio",
-    category: "Personal Web Experience",
-    gradient: "linear-gradient(135deg, #ff758c 0%, #ff7eb3 100%)",
-    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80",
+    title: "BookMyVendor",
+    category: "Marketplace / Modular Monolith",
+    gradient: "linear-gradient(135deg, #1e3c72 0%, #2a5298 100%)",
+    image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800&q=80",
     link: "#"
   },
   {
-    title: "Dashboard Pro",
-    category: "React Analytics Dashboard",
-    gradient: "linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%)",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80",
+    title: "FarmChain",
+    category: "AgriTech / ML Crop Forecasting",
+    gradient: "linear-gradient(135deg, #2b5876 0%, #4e4376 100%)",
+    image: "https://images.unsplash.com/photo-1586771107584-568c56ea5e3c?auto=format&fit=crop&w=800&q=80",
     link: "#"
   }
 ];

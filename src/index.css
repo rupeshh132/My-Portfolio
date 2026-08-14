@@ -319,7 +319,7 @@ ul { list-style: none; }
   text-decoration: none;
 }
 .card-img-wrapper {
-  border-radius: var(--radius-lg);
+  border-radius: 4px;
   overflow: hidden;
   position: relative;
   /* Clipping to ensure image doesn't break rounded corners on scale */
@@ -338,7 +338,7 @@ ul { list-style: none; }
   max-height: 100%;
   object-fit: cover;
   object-position: top;
-  border-radius: 12px;
+  border-radius: 4px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.15);
   border: 1px solid rgba(128,128,128,0.2);
   transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);

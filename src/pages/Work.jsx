@@ -56,42 +56,28 @@ const Work = () => {
           </a>
 
           <a href="#" className="card scroll-reveal stagger-3">
-            <div className="card-img-wrapper" style={{ aspectRatio: '1.45/1', background: 'linear-gradient(135deg, #ff758c 0%, #ff7eb3 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '20px' }}>
-              <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80" alt="AI Portfolio" className="card-mockup" style={{ objectFit: 'cover', width: '100%', height: '100%', borderRadius: '12px' }} />
+            <div className="card-img-wrapper" style={{ aspectRatio: '1.45/1', background: 'linear-gradient(135deg, #1e3c72 0%, #2a5298 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '20px' }}>
+              <div style={{ width: '100%', height: '100%', border: '2px solid rgba(255,255,255,0.1)', borderRadius: '4px', background: 'rgba(0,0,0,0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.8)" strokeWidth="1"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                <div style={{ color: 'rgba(255,255,255,0.8)', marginTop: '16px', fontWeight: 500, fontSize: '14px', letterSpacing: '0.1em' }}>MARKETPLACE ARCHITECTURE</div>
+              </div>
             </div>
             <div className="card-content" style={{ marginTop: '12px' }}>
-              <h3 style={{ fontSize: '32px', fontWeight: 500, letterSpacing: '-0.03em', color: 'var(--ink)', lineHeight: 1.1, margin: 0 }}>AI Portfolio</h3>
-              <p className="small" style={{ color: 'var(--muted-ink)', marginTop: '4px' }}>Interactive AI Experience</p>
+              <h3 style={{ fontSize: '32px', fontWeight: 500, letterSpacing: '-0.03em', color: 'var(--ink)', lineHeight: 1.1, margin: 0 }}>BookMyVendor</h3>
+              <p className="small" style={{ color: 'var(--muted-ink)', marginTop: '4px' }}>Modular Monolith & PostgreSQL</p>
             </div>
           </a>
 
           <a href="#" className="card scroll-reveal stagger-4">
-            <div className="card-img-wrapper" style={{ aspectRatio: '1.45/1', background: 'linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '20px' }}>
-              <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="Dashboard Pro" className="card-mockup" style={{ objectFit: 'cover', width: '100%', height: '100%', borderRadius: '12px' }} />
+            <div className="card-img-wrapper" style={{ aspectRatio: '1.45/1', background: 'linear-gradient(135deg, #2b5876 0%, #4e4376 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '20px' }}>
+              <div style={{ width: '100%', height: '100%', border: '2px solid rgba(255,255,255,0.1)', borderRadius: '4px', background: 'rgba(0,0,0,0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.8)" strokeWidth="1"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                <div style={{ color: 'rgba(255,255,255,0.8)', marginTop: '16px', fontWeight: 500, fontSize: '14px', letterSpacing: '0.1em' }}>AGRITECH / ML</div>
+              </div>
             </div>
             <div className="card-content" style={{ marginTop: '12px' }}>
-              <h3 style={{ fontSize: '32px', fontWeight: 500, letterSpacing: '-0.03em', color: 'var(--ink)', lineHeight: 1.1, margin: 0 }}>Dashboard Pro</h3>
-              <p className="small" style={{ color: 'var(--muted-ink)', marginTop: '4px' }}>Analytics & Data Vis</p>
-            </div>
-          </a>
-
-          <a href="#" className="card scroll-reveal stagger-1">
-            <div className="card-img-wrapper" style={{ aspectRatio: '1.45/1', background: 'linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '20px' }}>
-              <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80" alt="FinTech App" className="card-mockup" style={{ objectFit: 'cover', width: '100%', height: '100%', borderRadius: '12px' }} />
-            </div>
-            <div className="card-content" style={{ marginTop: '12px' }}>
-              <h3 style={{ fontSize: '32px', fontWeight: 500, letterSpacing: '-0.03em', color: 'var(--ink)', lineHeight: 1.1, margin: 0 }}>FinTech App</h3>
-              <p className="small" style={{ color: 'var(--muted-ink)', marginTop: '4px' }}>Secure Banking UI</p>
-            </div>
-          </a>
-
-          <a href="#" className="card scroll-reveal stagger-2">
-            <div className="card-img-wrapper" style={{ aspectRatio: '1.45/1', background: 'linear-gradient(135deg, #fccb90 0%, #d57eeb 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '20px' }}>
-              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="E-Commerce" className="card-mockup" style={{ objectFit: 'cover', width: '100%', height: '100%', borderRadius: '12px' }} />
-            </div>
-            <div className="card-content" style={{ marginTop: '12px' }}>
-              <h3 style={{ fontSize: '32px', fontWeight: 500, letterSpacing: '-0.03em', color: 'var(--ink)', lineHeight: 1.1, margin: 0 }}>Nova Shop</h3>
-              <p className="small" style={{ color: 'var(--muted-ink)', marginTop: '4px' }}>E-Commerce Platform</p>
+              <h3 style={{ fontSize: '32px', fontWeight: 500, letterSpacing: '-0.03em', color: 'var(--ink)', lineHeight: 1.1, margin: 0 }}>FarmChain</h3>
+              <p className="small" style={{ color: 'var(--muted-ink)', marginTop: '4px' }}>AI-Driven Crop Forecasting</p>
             </div>
           </a>
 

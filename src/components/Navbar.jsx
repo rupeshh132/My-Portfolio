@@ -35,6 +35,9 @@ const Navbar = () => {
           <Link to="/contact" className="nav-link" onClick={closeMenu}>
             Contact
           </Link>
+          <a href="/assets/Rupesh_Vishwakarma_Resume.pdf" target="_blank" rel="noreferrer" className="nav-link" style={{ borderLeft: '1px solid rgba(0,0,0,0.1)', paddingLeft: '24px', fontWeight: 600 }}>
+            Resume
+          </a>
         </div>
 
         <button className="nav-trigger" id="nav-trigger" aria-label="Toggle Menu" onClick={toggleMenu}>
