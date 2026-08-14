@@ -60,8 +60,7 @@ const Home = () => {
     setFormStatus('Sending...');
 
     // Web3Forms Integration
-    // Replace 'YOUR_ACCESS_KEY_HERE' with your actual Web3Forms access key
-    const ACCESS_KEY = "YOUR_ACCESS_KEY_HERE"; 
+    const ACCESS_KEY = "3493c270-29c8-44ff-9eb6-ba3ba7b599c0"; 
 
     const formData = new FormData(e.target);
     formData.append("access_key", ACCESS_KEY);
