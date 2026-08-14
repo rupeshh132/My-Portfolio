@@ -145,7 +145,7 @@ ul { list-style: none; }
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding: 0 10px 0 20px;
+  padding: 0 10px 0 24px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.1);
   transition: width 0.6s cubic-bezier(0.8, 0, 0.1, 1);
   overflow: hidden;
@@ -153,19 +153,6 @@ ul { list-style: none; }
 
 .navbar.open {
   width: min(580px, 90vw);
-}
-
-.nav-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  flex-shrink: 0;
-  transition: width 0.6s cubic-bezier(0.8, 0, 0.1, 1);
-}
-.navbar.open .nav-header {
-  width: auto;
-  margin-right: 32px;
 }
 
 .nav-logo {
@@ -184,6 +171,8 @@ ul { list-style: none; }
   cursor: pointer;
   border: none;
   transition: all 0.4s ease;
+  margin-left: auto; /* Push to far right */
+  flex-shrink: 0;
 }
 .nav-trigger:hover {
   background-color: #e0dcd7;
@@ -236,23 +225,27 @@ ul { list-style: none; }
 .navbar.open .nav-icon span:nth-child(3) { transform: translate(-50%, -50%) rotate(-45deg); }
 
 .nav-menu {
-  display: flex;
+  display: none;
   flex-direction: row;
   align-items: center;
   gap: clamp(12px, 3vw, 24px);
-  margin-top: 0;
+  margin-left: 24px;
   width: auto;
   opacity: 0;
   pointer-events: none;
   transform: translateX(10px);
-  transition: opacity 0.4s ease, transform 0.4s ease;
+  animation: fadeInMenu 0.4s ease forwards;
+  animation-delay: 0.2s;
   white-space: nowrap;
 }
 .navbar.open .nav-menu {
-  opacity: 1;
+  display: flex;
   pointer-events: auto;
-  transform: translateX(0);
-  transition-delay: 0.2s; /* Wait for width expansion */
+  animation: fadeInMenu 0.4s ease forwards;
+}
+
+@keyframes fadeInMenu {
+  to { opacity: 1; transform: translateX(0); }
 }
 
 .nav-link {

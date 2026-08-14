@@ -12,16 +12,8 @@ const Navbar = () => {
   return (
     <div className="navbar-wrapper">
       <nav className={`navbar ${isOpen ? 'open' : ''}`} id="main-nav">
-        <div className="nav-header">
-          <Link to="/" className="nav-logo" onClick={closeMenu}>Rupesh</Link>
-          <button className="nav-trigger" id="nav-trigger" aria-label="Toggle Menu" onClick={toggleMenu}>
-            <div className="nav-icon">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-          </button>
-        </div>
+        <Link to="/" className="nav-logo" onClick={closeMenu}>Rupesh</Link>
+        
         <div className="nav-menu">
           <Link to="/" className="nav-link" onClick={closeMenu}>
             Home
@@ -36,6 +28,14 @@ const Navbar = () => {
             Contact
           </Link>
         </div>
+
+        <button className="nav-trigger" id="nav-trigger" aria-label="Toggle Menu" onClick={toggleMenu}>
+          <div className="nav-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </button>
       </nav>
     </div>
   );
