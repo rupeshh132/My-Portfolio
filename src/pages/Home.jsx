@@ -6,6 +6,7 @@ import StackedCertifications from '../components/StackedCertifications';
 import OpenSourceActivity from '../components/OpenSourceActivity';
 import ServicesList from '../components/ServicesList';
 import HorizontalProjects from '../components/HorizontalProjects';
+import BentoTestimonials from '../components/BentoTestimonials';
 
 const Home = () => {
   const [formStatus, setFormStatus] = useState('Submit Inquiry');
@@ -94,90 +95,15 @@ const Home = () => {
       {/* Testimonials */}
       <section className="section">
         <div className="container">
-          <h2 className="h2 scroll-reveal" style={{ marginBottom: '60px' }}>Testimonials</h2>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '60px', flexWrap: 'wrap', gap: '16px' }}>
+            <h2 className="h2 scroll-reveal">Recommendations</h2>
+            <p className="small scroll-reveal stagger-1" style={{ color: 'var(--muted-ink)', maxWidth: '360px', textAlign: 'right' }}>
+              Words from people I've built with.
+            </p>
+          </div>
           
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '20px' }}>
-            
-            <div className="flip-card scroll-reveal stagger-1">
-              <div className="flip-card-inner">
-                <div className="flip-card-front">
-                  <h3 className="h3" style={{ color: 'white' }}>Colleague</h3>
-                </div>
-                <div className="flip-card-back">
-                  <p className="small" style={{ marginBottom: '24px', fontStyle: 'italic' }}>"Rupesh is an exceptional developer with a great eye for design and architecture. His work on AI integration is top-notch."</p>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                    <div style={{ width: '40px', height: '40px', borderRadius: '50%', background: '#fff', overflow: 'hidden' }}>
-                      <img src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto=format&fit=crop&w=100&q=80" alt="Avatar" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                    </div>
-                    <div>
-                      <div style={{ fontWeight: 700, fontSize: '14px' }}>Senior Developer</div>
-                      <div style={{ color: 'var(--muted-light-text)', fontSize: '12px' }}>Client/Colleague</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="flip-card scroll-reveal stagger-2">
-              <div className="flip-card-inner">
-                <div className="flip-card-front">
-                  <h3 className="h3" style={{ color: 'white' }}>GlobalTech</h3>
-                </div>
-                <div className="flip-card-back">
-                  <p className="small" style={{ marginBottom: '24px', fontStyle: 'italic' }}>"The clear, scalable systems built have completely transformed our workflow. Highly recommended."</p>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                    <div style={{ width: '40px', height: '40px', borderRadius: '50%', background: '#fff', overflow: 'hidden' }}>
-                      <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=100&q=80" alt="Avatar" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                    </div>
-                    <div>
-                      <div style={{ fontWeight: 700, fontSize: '14px' }}>John Smith</div>
-                      <div style={{ color: 'var(--muted-light-text)', fontSize: '12px' }}>CTO, GlobalTech</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            <div className="flip-card scroll-reveal stagger-3">
-              <div className="flip-card-inner">
-                <div className="flip-card-front">
-                  <h3 className="h3" style={{ color: 'white' }}>Nexus</h3>
-                </div>
-                <div className="flip-card-back">
-                  <p className="small" style={{ marginBottom: '24px', fontStyle: 'italic' }}>"Incredible design sensibilities matched with flawless execution."</p>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                    <div style={{ width: '40px', height: '40px', borderRadius: '50%', background: '#fff', overflow: 'hidden' }}>
-                      <img src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?auto=format&fit=crop&w=100&q=80" alt="Avatar" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                    </div>
-                    <div>
-                      <div style={{ fontWeight: 700, fontSize: '14px' }}>Alex Chen</div>
-                      <div style={{ color: 'var(--muted-light-text)', fontSize: '12px' }}>Founder, Nexus</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="flip-card scroll-reveal stagger-4">
-              <div className="flip-card-inner">
-                <div className="flip-card-front">
-                  <h3 className="h3" style={{ color: 'white' }}>Vertex</h3>
-                </div>
-                <div className="flip-card-back">
-                  <p className="small" style={{ marginBottom: '24px', fontStyle: 'italic' }}>"The best creative developer we've worked with. Period."</p>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                    <div style={{ width: '40px', height: '40px', borderRadius: '50%', background: '#fff', overflow: 'hidden' }}>
-                      <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=100&q=80" alt="Avatar" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                    </div>
-                    <div>
-                      <div style={{ fontWeight: 700, fontSize: '14px' }}>Sarah Lee</div>
-                      <div style={{ color: 'var(--muted-light-text)', fontSize: '12px' }}>Design Lead, Vertex</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
+          <div className="scroll-reveal stagger-1">
+            <BentoTestimonials />
           </div>
         </div>
       </section>
