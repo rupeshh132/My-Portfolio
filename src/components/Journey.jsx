@@ -1,6 +1,16 @@
-import React from 'react';
+import React, { useRef } from 'react';
+import { motion, useScroll, useReducedMotion } from 'framer-motion';
+import JourneyNode from './JourneyNode';
 
 const Journey = () => {
+  const containerRef = useRef(null);
+  const prefersReducedMotion = useReducedMotion();
+  
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start center", "end center"]
+  });
+
   const events = [
     {
       year: '2022',
@@ -47,9 +57,9 @@ const Journey = () => {
   };
 
   return (
-    <section className="section">
+    <section className="section" ref={containerRef}>
       <div className="container">
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '60px', flexWrap: 'wrap', gap: '16px' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '80px', flexWrap: 'wrap', gap: '16px' }}>
           <h2 className="h2 scroll-reveal">The Journey</h2>
           <p className="small scroll-reveal stagger-1" style={{ color: 'var(--muted-ink)', maxWidth: '360px', textAlign: 'right' }}>
             Not a straight line. A set of deliberate moves.
@@ -57,95 +67,34 @@ const Journey = () => {
         </div>
 
         <div style={{ position: 'relative' }}>
-          {/* Vertical line */}
+          {/* Faint background line (Track) */}
           <div style={{
             position: 'absolute',
-            left: '0',
+            left: '140px', // Centers perfectly in the 40px grid gap
             top: '8px',
             bottom: 0,
-            width: '1px',
+            width: '2px',
             background: 'var(--border-color)',
+            opacity: 0.3
+          }} />
+
+          {/* The Scroll-Drawn Active Line */}
+          <motion.div style={{
+            position: 'absolute',
+            left: '140px', // Matches background line
+            top: '8px',
+            bottom: 0,
+            width: '2px',
+            background: 'var(--ink)',
+            scaleY: prefersReducedMotion ? 1 : scrollYProgress,
+            transformOrigin: 'top',
+            zIndex: 1
           }} />
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: '0' }}>
-            {events.map((ev, i) => {
-              const s = typeStyles[ev.type];
-              return (
-                <div
-                  key={i}
-                  className={`scroll-reveal stagger-${(i % 4) + 1}`}
-                  style={{
-                    display: 'grid',
-                    gridTemplateColumns: '120px 1fr',
-                    gap: '0 40px',
-                    paddingBottom: i < events.length - 1 ? '48px' : '0',
-                    position: 'relative',
-                  }}
-                >
-                  {/* Year */}
-                  <div style={{ paddingTop: '2px', textAlign: 'right', paddingRight: '0' }}>
-                    <span style={{
-                      fontSize: '13px',
-                      fontWeight: 700,
-                      letterSpacing: '0.06em',
-                      color: 'var(--muted-ink)',
-                      textTransform: 'uppercase',
-                    }}>{ev.year}</span>
-                  </div>
-
-                  {/* Content */}
-                  <div style={{ paddingLeft: '40px', position: 'relative' }}>
-                    {/* Dot on the line */}
-                    <div style={{
-                      position: 'absolute',
-                      left: '-1px',
-                      top: '6px',
-                      width: '9px',
-                      height: '9px',
-                      borderRadius: '50%',
-                      background: s.dot,
-                      transform: 'translateX(-50%)',
-                      border: '2px solid var(--bg-color)',
-                      outline: `1px solid ${s.dot}`,
-                    }} />
-
-                    <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px', flexWrap: 'wrap', marginBottom: '10px' }}>
-                      <h3 style={{
-                        fontSize: 'clamp(18px, 2vw, 22px)',
-                        fontWeight: 700,
-                        letterSpacing: '-0.02em',
-                        lineHeight: 1.2,
-                        margin: 0,
-                        color: 'var(--ink)',
-                        flex: '1 1 200px',
-                      }}>{ev.title}</h3>
-
-                      <span style={{
-                        display: 'inline-block',
-                        padding: '4px 12px',
-                        borderRadius: '100px',
-                        fontSize: '12px',
-                        fontWeight: 700,
-                        letterSpacing: '0.03em',
-                        background: s.tag,
-                        color: 'var(--ink)',
-                        whiteSpace: 'nowrap',
-                        flexShrink: 0,
-                        marginTop: '2px',
-                      }}>{ev.tag}</span>
-                    </div>
-
-                    <p style={{
-                      fontSize: '16px',
-                      color: 'var(--muted-ink)',
-                      lineHeight: 1.7,
-                      margin: 0,
-                      maxWidth: '680px',
-                    }}>{ev.desc}</p>
-                  </div>
-                </div>
-              );
-            })}
+            {events.map((ev, i) => (
+              <JourneyNode key={i} ev={ev} index={i} isLast={i === events.length - 1} />
+            ))}
           </div>
         </div>
       </div>
