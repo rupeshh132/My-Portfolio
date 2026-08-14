@@ -142,6 +142,7 @@ ul { list-style: none; }
   width: 200px;
   height: 56px;
   border-radius: 28px;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -229,11 +230,12 @@ ul { list-style: none; }
   flex-direction: row;
   align-items: center;
   gap: clamp(12px, 3vw, 24px);
-  margin-left: 24px;
   width: auto;
   opacity: 0;
   pointer-events: none;
-  transform: translateX(10px);
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 10px);
   animation: fadeInMenu 0.4s ease forwards;
   animation-delay: 0.2s;
   white-space: nowrap;
@@ -245,7 +247,7 @@ ul { list-style: none; }
 }
 
 @keyframes fadeInMenu {
-  to { opacity: 1; transform: translateX(0); }
+  to { opacity: 1; transform: translate(-50%, 0); }
 }
 
 .nav-link {
