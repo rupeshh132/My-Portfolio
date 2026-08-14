@@ -5,6 +5,7 @@ import Journey from '../components/Journey';
 import Certifications from '../components/Certifications';
 import OpenSourceActivity from '../components/OpenSourceActivity';
 import ServicesList from '../components/ServicesList';
+import HorizontalProjects from '../components/HorizontalProjects';
 
 const Home = () => {
   const [formStatus, setFormStatus] = useState('Submit Inquiry');
@@ -79,63 +80,7 @@ const Home = () => {
       </section>
 
       {/* Featured Projects */}
-      <section className="section">
-        <div className="container">
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '60px' }}>
-            <h2 className="h2 scroll-reveal">Featured Projects</h2>
-            <a href="/work" className="btn-arrow dark scroll-reveal stagger-1">
-              <span>View All Work</span>
-              <div className="arrow-box">
-                <div className="arrow-inner">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </div>
-              </div>
-            </a>
-          </div>
-          
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', gap: '40px' }}>
-            <a href="https://devlens-ai-pearl.vercel.app" target="_blank" rel="noreferrer" className="card scroll-reveal stagger-1">
-              <div className="card-img-wrapper" style={{ aspectRatio: '1.45/1', background: 'linear-gradient(135deg, #11998e 0%, #38ef7d 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '20px' }}>
-                <img src="/assets/devlens-ai.png" alt="DevLens AI" className="card-mockup" />
-              </div>
-              <div className="card-content" style={{ marginTop: '12px' }}>
-                <h3 style={{ fontSize: '32px', fontWeight: 500, letterSpacing: '-0.03em', color: 'var(--ink)', lineHeight: 1.1, margin: 0 }}>DevLens AI</h3>
-                <p style={{ fontSize: '16px', color: 'var(--ink)', margin: '4px 0 0 0', opacity: 0.8 }}>AI-Powered Career Prep Platform / SaaS Web App</p>
-              </div>
-            </a>
-            
-            <a href="https://jankalyan-coral.vercel.app" target="_blank" rel="noreferrer" className="card scroll-reveal stagger-2">
-              <div className="card-img-wrapper" style={{ aspectRatio: '1.45/1', background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '20px' }}>
-                <img src="/assets/jankalyan.png" alt="JanKalyan" className="card-mockup" />
-              </div>
-              <div className="card-content" style={{ marginTop: '12px' }}>
-                <h3 style={{ fontSize: '32px', fontWeight: 500, letterSpacing: '-0.03em', color: 'var(--ink)', lineHeight: 1.1, margin: 0 }}>JanKalyan</h3>
-                <p style={{ fontSize: '16px', color: 'var(--ink)', margin: '4px 0 0 0', opacity: 0.8 }}>Civic Tech Platform / Public Grievance Redressal</p>
-              </div>
-            </a>
-
-            <a href="#" className="card scroll-reveal stagger-3">
-              <div className="card-img-wrapper" style={{ aspectRatio: '1.45/1', background: 'linear-gradient(135deg, #ff758c 0%, #ff7eb3 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '20px' }}>
-                <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80" alt="Kavi" className="card-mockup" />
-              </div>
-              <div className="card-content" style={{ marginTop: '12px' }}>
-                <h3 style={{ fontSize: '32px', fontWeight: 500, letterSpacing: '-0.03em', color: 'var(--ink)', lineHeight: 1.1, margin: 0 }}>AI Portfolio</h3>
-                <p style={{ fontSize: '16px', color: 'var(--ink)', margin: '4px 0 0 0', opacity: 0.8 }}>Personal Web Experience</p>
-              </div>
-            </a>
-
-            <a href="#" className="card scroll-reveal stagger-4">
-              <div className="card-img-wrapper" style={{ aspectRatio: '1.45/1', background: 'linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '20px' }}>
-                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="PostWing" className="card-mockup" />
-              </div>
-              <div className="card-content" style={{ marginTop: '12px' }}>
-                <h3 style={{ fontSize: '32px', fontWeight: 500, letterSpacing: '-0.03em', color: 'var(--ink)', lineHeight: 1.1, margin: 0 }}>Dashboard Pro</h3>
-                <p style={{ fontSize: '16px', color: 'var(--ink)', margin: '4px 0 0 0', opacity: 0.8 }}>React Analytics Dashboard</p>
-              </div>
-            </a>
-          </div>
-        </div>
-      </section>
+      <HorizontalProjects />
 
       {/* Journey */}
       <Journey />
