@@ -7,6 +7,8 @@ import OpenSourceActivity from '../components/OpenSourceActivity';
 import ServicesList from '../components/ServicesList';
 import HorizontalProjects from '../components/HorizontalProjects';
 import BentoTestimonials from '../components/BentoTestimonials';
+import { Link } from 'react-router-dom';
+import { blogPosts } from '../data/blogPosts';
 
 const Home = () => {
   const [formStatus, setFormStatus] = useState('Submit Inquiry');
@@ -139,27 +141,18 @@ const Home = () => {
           
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '40px' }}>
             
-            <a href="#" className="card scroll-reveal stagger-1" style={{ height: '460px' }}>
-              <div className="card-img-wrapper" style={{ height: '100%', borderRadius: '4px' }}>
-                <img src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?auto=format&fit=crop&w=800&q=80" alt="Blog 1" className="card-img" style={{ filter: 'grayscale(100%)' }} />
-                <div style={{ position: 'absolute', bottom: 0, left: 0, width: '100%', padding: '32px 24px', background: 'linear-gradient(transparent, rgba(17,17,17,0.9))', color: 'var(--light-text)' }}>
-                  <div className="small" style={{ color: 'var(--muted-light-text)', marginBottom: '8px' }}>Oct 12, 2026</div>
-                  <h3 className="h3" style={{ marginBottom: '8px' }}>Building Trust Through Clear Design</h3>
-                  <p className="small" style={{ opacity: 0.8 }}>How simplicity fosters user confidence.</p>
+            {blogPosts.slice(0, 2).map((post, idx) => (
+              <Link to={`/blog/${post.id}`} key={post.id} className={`card scroll-reveal stagger-${idx + 1}`} style={{ height: '460px', textDecoration: 'none' }}>
+                <div className="card-img-wrapper" style={{ height: '100%', borderRadius: '4px' }}>
+                  <img src={post.image} alt={post.title} className="card-img" style={{ filter: 'grayscale(100%)' }} />
+                  <div style={{ position: 'absolute', bottom: 0, left: 0, width: '100%', padding: '32px 24px', background: 'linear-gradient(transparent, rgba(17,17,17,0.9))', color: 'var(--light-text)' }}>
+                    <div className="small" style={{ color: 'var(--muted-light-text)', marginBottom: '8px' }}>{post.date}</div>
+                    <h3 className="h3" style={{ marginBottom: '8px' }}>{post.title}</h3>
+                    <p className="small" style={{ opacity: 0.8 }}>{post.description}</p>
+                  </div>
                 </div>
-              </div>
-            </a>
-
-            <a href="#" className="card scroll-reveal stagger-2" style={{ height: '460px' }}>
-              <div className="card-img-wrapper" style={{ height: '100%', borderRadius: '4px' }}>
-                <img src="https://images.unsplash.com/photo-1542435503-956c469947f6?auto=format&fit=crop&w=800&q=80" alt="Blog 2" className="card-img" style={{ filter: 'grayscale(100%)' }} />
-                <div style={{ position: 'absolute', bottom: 0, left: 0, width: '100%', padding: '32px 24px', background: 'linear-gradient(transparent, rgba(17,17,17,0.9))', color: 'var(--light-text)' }}>
-                  <div className="small" style={{ color: 'var(--muted-light-text)', marginBottom: '8px' }}>Sep 28, 2026</div>
-                  <h3 className="h3" style={{ marginBottom: '8px' }}>The Role of Art Direction</h3>
-                  <p className="small" style={{ opacity: 0.8 }}>Elevating brand systems in digital products.</p>
-                </div>
-              </div>
-            </a>
+              </Link>
+            ))}
 
             <div className="scroll-reveal stagger-3" style={{ height: '460px', backgroundColor: 'var(--ink)', borderRadius: '4px', padding: '40px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', position: 'relative', overflow: 'hidden' }}>
               <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', backgroundImage: 'url("data:image/svg+xml,%3Csvg viewBox=\\"0 0 200 200\\" xmlns=\\"http://www.w3.org/2000/svg\\"%3E%3Cfilter id=\\"noiseFilter\\"%3E%3CfeTurbulence type=\\"fractalNoise\\" baseFrequency=\\"0.65\\" numOctaves=\\"3\\" stitchTiles=\\"stitch\\"/>%3C/filter%3E%3Crect width=\\"100%25\\" height=\\"100%25\\" filter=\\"url(%23noiseFilter)\\"/>%3C/svg%3E")', opacity: 0.1, pointerEvents: 'none' }}></div>
