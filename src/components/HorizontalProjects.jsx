@@ -5,28 +5,28 @@ const projects = [
   {
     title: "DevLens AI",
     category: "AI-Powered Career Prep Platform / SaaS Web App",
-    gradient: "linear-gradient(135deg, #11998e 0%, #38ef7d 100%)",
+    gradient: "#EAEAEA",
     image: "/assets/devlens-ai.png",
     link: "https://devlens-ai-pearl.vercel.app"
   },
   {
     title: "JanKalyan",
     category: "Civic Tech Platform / Public Grievance Redressal",
-    gradient: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+    gradient: "#EAEAEA",
     image: "/assets/jankalyan.png",
     link: "https://jankalyan-coral.vercel.app"
   },
   {
     title: "BookMyVendor",
     category: "Marketplace / Modular Monolith",
-    gradient: "linear-gradient(135deg, #1e3c72 0%, #2a5298 100%)",
+    gradient: "#EAEAEA",
     image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800&q=80",
     link: "#"
   },
   {
     title: "FarmChain",
     category: "AgriTech / ML Crop Forecasting",
-    gradient: "linear-gradient(135deg, #2b5876 0%, #4e4376 100%)",
+    gradient: "#EAEAEA",
     image: "https://images.unsplash.com/photo-1500937386664-56d1dfef4bc1?auto=format&fit=crop&w=800&q=80",
     link: "#"
   }

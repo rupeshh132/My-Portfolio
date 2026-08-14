@@ -36,7 +36,7 @@ const Work = () => {
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', gap: '40px' }}>
           
           <a href="https://devlens-ai-pearl.vercel.app" target="_blank" rel="noreferrer" className="card scroll-reveal stagger-1">
-            <div className="card-img-wrapper" style={{ aspectRatio: '1.45/1', background: 'linear-gradient(135deg, #11998e 0%, #38ef7d 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '20px' }}>
+            <div className="card-img-wrapper" style={{ aspectRatio: '1.45/1', background: '#EFEFEF', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '20px' }}>
               <img src="/assets/devlens-ai.png" alt="DevLens AI" className="card-mockup" />
             </div>
             <div className="card-content" style={{ marginTop: '12px' }}>
@@ -46,7 +46,7 @@ const Work = () => {
           </a>
           
           <a href="https://jankalyan-coral.vercel.app" target="_blank" rel="noreferrer" className="card scroll-reveal stagger-2">
-            <div className="card-img-wrapper" style={{ aspectRatio: '1.45/1', background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '20px' }}>
+            <div className="card-img-wrapper" style={{ aspectRatio: '1.45/1', background: '#EFEFEF', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '20px' }}>
               <img src="/assets/jankalyan.png" alt="JanKalyan" className="card-mockup" />
             </div>
             <div className="card-content" style={{ marginTop: '12px' }}>
@@ -56,8 +56,8 @@ const Work = () => {
           </a>
 
           <a href="#" className="card scroll-reveal stagger-3">
-            <div className="card-img-wrapper" style={{ aspectRatio: '1.45/1', background: 'linear-gradient(135deg, #1e3c72 0%, #2a5298 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '20px' }}>
-              <div style={{ width: '100%', height: '100%', border: '2px solid rgba(255,255,255,0.1)', borderRadius: '4px', background: 'rgba(0,0,0,0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
+            <div className="card-img-wrapper" style={{ aspectRatio: '1.45/1', background: 'var(--ink)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '20px' }}>
+              <div style={{ width: '100%', height: '100%', border: '2px solid rgba(255,255,255,0.1)', borderRadius: '4px', background: 'rgba(255,255,255,0.02)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
                 <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.8)" strokeWidth="1"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
                 <div style={{ color: 'rgba(255,255,255,0.8)', marginTop: '16px', fontWeight: 500, fontSize: '14px', letterSpacing: '0.1em' }}>MARKETPLACE ARCHITECTURE</div>
               </div>
@@ -69,10 +69,10 @@ const Work = () => {
           </a>
 
           <a href="#" className="card scroll-reveal stagger-4">
-            <div className="card-img-wrapper" style={{ aspectRatio: '1.45/1', background: 'linear-gradient(135deg, #2b5876 0%, #4e4376 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '20px' }}>
-              <div style={{ width: '100%', height: '100%', border: '2px solid rgba(255,255,255,0.1)', borderRadius: '4px', background: 'rgba(0,0,0,0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
-                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.8)" strokeWidth="1"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
-                <div style={{ color: 'rgba(255,255,255,0.8)', marginTop: '16px', fontWeight: 500, fontSize: '14px', letterSpacing: '0.1em' }}>AGRITECH / ML</div>
+            <div className="card-img-wrapper" style={{ aspectRatio: '1.45/1', background: '#EFEFEF', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '20px' }}>
+              <div style={{ width: '100%', height: '100%', border: '2px solid rgba(0,0,0,0.1)', borderRadius: '4px', background: 'rgba(0,0,0,0.02)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" strokeWidth="1"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                <div style={{ color: 'var(--ink)', marginTop: '16px', fontWeight: 500, fontSize: '14px', letterSpacing: '0.1em' }}>AGRITECH / ML</div>
               </div>
             </div>
             <div className="card-content" style={{ marginTop: '12px' }}>
