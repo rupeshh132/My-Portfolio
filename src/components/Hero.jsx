@@ -25,7 +25,7 @@ const Hero = () => {
   const headlineY = useTransform(scrollYProgress, [0, 0.7, 1], ["0vh", "-100vh", "-100vh"]);
 
   const imgStyle = {
-    width: 'clamp(250px, 28vw, 400px)',
+    width: 'clamp(180px, 60vw, 400px)',
     aspectRatio: '4 / 5',
     objectFit: 'cover',
   };
@@ -144,7 +144,7 @@ const Hero = () => {
           }}>
 
             {/* Left */}
-            <div style={{ flex: '1 1 280px', maxWidth: '380px' }}>
+            <div style={{ flex: '1 1 min(100%, 280px)', maxWidth: '380px' }}>
               <h2 style={{ fontSize: 'clamp(56px, 7vw, 96px)', fontWeight: 800, margin: '0 0 16px', letterSpacing: '-0.04em', lineHeight: 1 }}>Hey!</h2>
               <p className="lead">
                 I'm Rupesh, a passionate Full Stack Engineer focused on building scalable, modern web applications.
@@ -186,7 +186,7 @@ const Hero = () => {
             <div className="desktop-only" style={{ width: 'clamp(250px, 28vw, 400px)', aspectRatio: '4 / 5', flexShrink: 0 }} />
 
             {/* Right */}
-            <div style={{ flex: '1 1 280px', maxWidth: '380px', marginTop: '120px' }}>
+            <div style={{ flex: '1 1 min(100%, 280px)', maxWidth: '380px', marginTop: '120px' }}>
               <p className="body" style={{ margin: 0, color: 'var(--muted-ink)', fontSize: '18px' }}>
                 I specialize in React, Java Spring Boot, and integrating AI to solve real-world problems. I love crafting clean code and premium digital experiences.
               </p>

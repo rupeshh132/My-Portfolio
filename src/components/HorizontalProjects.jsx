@@ -64,7 +64,7 @@ const HorizontalProjects = () => {
         <motion.div style={{ x, display: "flex", gap: "60px", paddingLeft: "5%", paddingRight: "5%", alignItems: "center", height: "100%" }}>
           
           {/* Section Header (Now acts as the first "slide") */}
-          <div style={{ flexShrink: 0, width: "clamp(300px, 30vw, 500px)", paddingRight: "clamp(20px, 4vw, 40px)" }}>
+          <div style={{ flexShrink: 0, width: "clamp(200px, 60vw, 500px)", paddingRight: "clamp(20px, 4vw, 40px)" }}>
             <h2 className="h2" style={{ fontSize: "clamp(48px, 6vw, 80px)", lineHeight: 1, margin: 0 }}>Featured Projects</h2>
             <a href="/work" className="btn-arrow dark" style={{ marginTop: '32px' }}>
               <span>View All Work</span>
