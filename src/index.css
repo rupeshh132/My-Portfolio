@@ -507,7 +507,7 @@ ul { list-style: none; }
 .contact-form {
   background-color: var(--ink);
   padding: 40px;
-  border-radius: var(--radius-lg);
+  border-radius: 4px;
   color: var(--light-text);
 }
 .form-group {
@@ -523,7 +523,7 @@ ul { list-style: none; }
   width: 100%;
   background: rgba(250, 247, 243, 0.05);
   border: 1px solid rgba(250, 247, 243, 0.1);
-  border-radius: var(--radius-md);
+  border-radius: 4px;
   padding: 16px;
   color: var(--light-text);
   font-family: inherit;
@@ -544,7 +544,7 @@ ul { list-style: none; }
   color: var(--ink);
   border: none;
   padding: 16px 32px;
-  border-radius: var(--radius-md);
+  border-radius: 4px;
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;

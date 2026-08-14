@@ -55,14 +55,39 @@ const Home = () => {
     };
   }, []);
 
-  const handleFormSubmit = (e) => {
+  const handleFormSubmit = async (e) => {
     e.preventDefault();
     setFormStatus('Sending...');
-    setTimeout(() => {
-      setFormStatus('Success');
-      e.target.reset();
+
+    // Web3Forms Integration
+    // Replace 'YOUR_ACCESS_KEY_HERE' with your actual Web3Forms access key
+    const ACCESS_KEY = "YOUR_ACCESS_KEY_HERE"; 
+
+    const formData = new FormData(e.target);
+    formData.append("access_key", ACCESS_KEY);
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setFormStatus('Success');
+        e.target.reset();
+        setTimeout(() => setFormStatus('Submit Inquiry'), 3000);
+      } else {
+        console.error("Error", data);
+        setFormStatus('Error. Try again.');
+        setTimeout(() => setFormStatus('Submit Inquiry'), 3000);
+      }
+    } catch (error) {
+      console.error(error);
+      setFormStatus('Error. Try again.');
       setTimeout(() => setFormStatus('Submit Inquiry'), 3000);
-    }, 1500);
+    }
   };
 
   return (
@@ -188,15 +213,15 @@ const Home = () => {
               <form onSubmit={handleFormSubmit}>
                 <div className="form-group">
                   <label className="form-label" htmlFor="name">Name</label>
-                  <input type="text" id="name" className="form-input" required />
+                  <input type="text" id="name" name="name" className="form-input" required />
                 </div>
                 <div className="form-group">
                   <label className="form-label" htmlFor="email">Email</label>
-                  <input type="email" id="email" className="form-input" required />
+                  <input type="email" id="email" name="email" className="form-input" required />
                 </div>
                 <div className="form-group">
                   <label className="form-label" htmlFor="project">Your Project</label>
-                  <textarea id="project" className="form-input" rows="4" required style={{ resize: 'vertical' }}></textarea>
+                  <textarea id="project" name="project" className="form-input" rows="4" required style={{ resize: 'vertical' }}></textarea>
                 </div>
                 <button type="submit" className="btn-submit" disabled={formStatus === 'Sending...'}>
                   <span>{formStatus}</span>
