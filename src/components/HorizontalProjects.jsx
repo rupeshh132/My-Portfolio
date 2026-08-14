@@ -38,11 +38,14 @@ const HorizontalProjects = () => {
   // Track scroll progress of the targetRef container
   const { scrollYProgress } = useScroll({
     target: targetRef,
+    offset: ["start start", "end end"]
   });
 
-  // Map vertical scroll (0 to 1) to horizontal movement
-  // calc(-100% + 100vw) ensures the sliding track stops exactly when its right edge hits the right edge of the screen.
-  const x = useTransform(scrollYProgress, [0, 1], ["0%", "calc(-100% + 100vw)"]);
+  // Map vertical scroll (0 to 1) to horizontal movement (0 to -100)
+  const xRaw = useTransform(scrollYProgress, [0, 1], [0, -100]);
+  
+  // Use a mapping function to avoid Framer Motion's string parsing bugs with calc()
+  const x = useTransform(xRaw, (val) => `calc(${val}% + ${-val}vw)`);
 
   return (
     <section ref={targetRef} style={{ height: "400vh", position: "relative" }}>
