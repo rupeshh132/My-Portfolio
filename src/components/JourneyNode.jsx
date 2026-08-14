@@ -1,9 +1,17 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { motion, useInView, useReducedMotion } from 'framer-motion';
 
 const JourneyNode = ({ ev, index, isLast }) => {
   const ref = useRef(null);
   const prefersReducedMotion = useReducedMotion();
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
   
   // Triggers when the element hits the middle of the screen
   const isInView = useInView(ref, { margin: "-30% 0px -30% 0px" });
@@ -30,8 +38,8 @@ const JourneyNode = ({ ev, index, isLast }) => {
       transition={{ duration: 0.5, ease: "easeInOut" }}
       style={{
         display: 'grid',
-        gridTemplateColumns: '120px 1fr',
-        gap: '0 40px',
+        gridTemplateColumns: isMobile ? '70px 1fr' : '120px 1fr',
+        gap: isMobile ? '0 20px' : '0 40px',
         paddingBottom: isLast ? '0' : '64px',
         position: 'relative',
       }}
@@ -59,7 +67,7 @@ const JourneyNode = ({ ev, index, isLast }) => {
           transition={{ duration: 0.3 }}
           style={{
             position: 'absolute',
-            left: '-25px', // Mathematically positions dot center at exactly 141px
+            left: isMobile ? '-16px' : '-25px', // Mathematically positions dot center at 80px (mobile) or 141px (desktop)
             top: '6px',
             width: '12px',
             height: '12px',

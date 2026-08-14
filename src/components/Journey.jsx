@@ -1,10 +1,18 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { motion, useScroll, useReducedMotion } from 'framer-motion';
 import JourneyNode from './JourneyNode';
 
 const Journey = () => {
   const containerRef = useRef(null);
   const prefersReducedMotion = useReducedMotion();
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
   
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -70,7 +78,7 @@ const Journey = () => {
           {/* Faint background line (Track) */}
           <div style={{
             position: 'absolute',
-            left: '140px', // Centers perfectly in the 40px grid gap
+            left: isMobile ? '80px' : '140px', // Centers perfectly in the grid gap
             top: '8px',
             bottom: 0,
             width: '2px',
@@ -81,7 +89,7 @@ const Journey = () => {
           {/* The Scroll-Drawn Active Line */}
           <motion.div style={{
             position: 'absolute',
-            left: '140px', // Matches background line
+            left: isMobile ? '80px' : '140px', // Matches background line
             top: '8px',
             bottom: 0,
             width: '2px',

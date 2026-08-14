@@ -111,17 +111,21 @@ const OpenSourceActivity = () => {
               </span>
             </div>
 
-            <GitHubCalendar
-              username={GITHUB_USERNAME}
-              colorScheme="light"
-              theme={{
-                light: ['#ebedf0', '#9be9a8', '#40c463', '#30a14e', '#216e39'],
-              }}
-              fontSize={12}
-              blockSize={13}
-              blockMargin={4}
-              style={{ width: '100%' }}
-            />
+            <div style={{ width: '100%', overflowX: 'auto', paddingBottom: '16px', WebkitOverflowScrolling: 'touch' }}>
+              <div style={{ minWidth: '750px' }}>
+                <GitHubCalendar
+                  username={GITHUB_USERNAME}
+                  colorScheme="light"
+                  theme={{
+                    light: ['#ebedf0', '#9be9a8', '#40c463', '#30a14e', '#216e39'],
+                  }}
+                  fontSize={12}
+                  blockSize={13}
+                  blockMargin={4}
+                  style={{ width: '100%' }}
+                />
+              </div>
+            </div>
           </div>
 
           <div style={{

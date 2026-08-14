@@ -150,6 +150,13 @@ const StackedCertifications = () => {
                   boxShadow: `0 12px 40px ${cert.accent}30`,
                   zIndex: 10 // Bring to front on hover
                 }}
+                whileTap={{
+                  scale: 0.98,
+                  y: prefersReducedMotion ? -2 : (isMobile ? -4 : (idx === 1 ? -15 : 15)),
+                  borderColor: cert.accent,
+                  boxShadow: `0 12px 40px ${cert.accent}30`,
+                  zIndex: 10
+                }}
                 transition={{ duration: 0.3 }}
               >
                 {/* Top row */}

@@ -64,7 +64,7 @@ const HorizontalProjects = () => {
         <motion.div style={{ x, display: "flex", gap: "60px", paddingLeft: "5%", paddingRight: "5%", alignItems: "center", height: "100%" }}>
           
           {/* Section Header (Now acts as the first "slide") */}
-          <div style={{ flexShrink: 0, width: "clamp(300px, 30vw, 500px)", paddingRight: "40px" }}>
+          <div style={{ flexShrink: 0, width: "clamp(300px, 30vw, 500px)", paddingRight: "clamp(20px, 4vw, 40px)" }}>
             <h2 className="h2" style={{ fontSize: "clamp(48px, 6vw, 80px)", lineHeight: 1, margin: 0 }}>Featured Projects</h2>
             <a href="/work" className="btn-arrow dark" style={{ marginTop: '32px' }}>
               <span>View All Work</span>
@@ -86,7 +86,7 @@ const HorizontalProjects = () => {
                     display: 'flex', 
                     alignItems: 'center', 
                     justifyContent: 'center', 
-                    padding: '40px',
+                    padding: 'clamp(16px, 4vw, 40px)',
                     overflow: 'hidden'
                   }}
                 >
@@ -99,8 +99,8 @@ const HorizontalProjects = () => {
                     }}
                   />
                 </div>
-                <div className="card-content" style={{ marginTop: '24px', paddingLeft: '8px' }}>
-                  <h3 style={{ fontSize: '48px', fontWeight: 600, letterSpacing: '-0.03em', color: 'var(--ink)', lineHeight: 1.1, margin: 0 }}>
+                <div className="card-content" style={{ marginTop: '24px', paddingLeft: 'clamp(4px, 2vw, 8px)' }}>
+                  <h3 style={{ fontSize: 'clamp(28px, 5vw, 48px)', fontWeight: 600, letterSpacing: '-0.03em', color: 'var(--ink)', lineHeight: 1.1, margin: 0 }}>
                     {project.title}
                   </h3>
                   <p style={{ fontSize: '18px', color: 'var(--muted-ink)', margin: '8px 0 0 0', fontWeight: 500 }}>

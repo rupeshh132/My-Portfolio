@@ -5,6 +5,14 @@ const LEETCODE_USERNAME = 'rupeshh132';
 const LeetCodeStats = () => {
   const [stats, setStats] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   useEffect(() => {
     fetch(`https://leetcode-stats-api.herokuapp.com/${LEETCODE_USERNAME}`)
@@ -55,13 +63,13 @@ const LeetCodeStats = () => {
       </div>
 
       {loading ? (
-        <div style={{ display: 'flex', gap: '12px' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: isMobile ? 'repeat(2, 1fr)' : 'repeat(4, 1fr)', gap: '12px' }}>
           {[1,2,3,4].map(i => (
-            <div key={i} style={{ flex: 1, height: '72px', background: '#f0f0ee', borderRadius: '12px', animation: 'pulse 1.5s ease infinite' }} />
+            <div key={i} style={{ height: '72px', background: '#f0f0ee', borderRadius: '12px', animation: 'pulse 1.5s ease infinite' }} />
           ))}
         </div>
       ) : (
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '10px' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: isMobile ? 'repeat(2, 1fr)' : 'repeat(4, 1fr)', gap: '10px' }}>
           {statItems.map((item, i) => (
             <div key={i} style={{
               background: item.bg,
