@@ -23,9 +23,6 @@ const Navbar = () => {
         <Link to="/" className="nav-logo" onClick={handleScrollToTop}>Rupesh</Link>
         
         <div className="nav-menu">
-          <Link to="/" className="nav-link" onClick={handleScrollToTop}>
-            Home
-          </Link>
           <Link to="/work" className="nav-link" onClick={closeMenu}>
             Works
           </Link>
