@@ -3,6 +3,13 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 
 const projects = [
   {
+    title: "PrintBloom",
+    category: "Full-Stack E-commerce / Live Freelance Project",
+    gradient: "var(--ink)",
+    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80",
+    link: "https://printbloom.in/"
+  },
+  {
     title: "DevLens AI",
     category: "AI-Powered Career Prep Platform / SaaS Web App",
     gradient: "#EAEAEA",

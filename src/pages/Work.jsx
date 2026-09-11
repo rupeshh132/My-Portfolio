@@ -35,6 +35,16 @@ const Work = () => {
 
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', gap: '40px' }}>
           
+          <a href="https://printbloom.in/" target="_blank" rel="noreferrer" className="card scroll-reveal stagger-1">
+            <div className="card-img-wrapper" style={{ aspectRatio: '1.45/1', background: 'var(--ink)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '20px' }}>
+              <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80" alt="PrintBloom" className="card-mockup" />
+            </div>
+            <div className="card-content" style={{ marginTop: '12px' }}>
+              <h3 className="h3">PrintBloom 🌸</h3>
+              <p className="small" style={{ color: 'var(--muted-ink)' }}>Live Freelance E-commerce / Next.js 15, Supabase, Razorpay</p>
+            </div>
+          </a>
+          
           <a href="https://devlens-ai-pearl.vercel.app" target="_blank" rel="noreferrer" className="card scroll-reveal stagger-1">
             <div className="card-img-wrapper" style={{ aspectRatio: '1.45/1', background: '#EFEFEF', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '20px' }}>
               <img src="/assets/devlens-ai.png" alt="DevLens AI" className="card-mockup" />

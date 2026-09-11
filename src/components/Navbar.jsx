@@ -32,6 +32,9 @@ const Navbar = () => {
           <Link to="/blog" className="nav-link" onClick={closeMenu}>
             Blog
           </Link>
+          <Link to="/services" className="nav-link" onClick={closeMenu}>
+            Services
+          </Link>
           <Link to="/contact" className="nav-link" onClick={closeMenu}>
             Contact
           </Link>

@@ -1,5 +1,60 @@
 export const blogPosts = [
   {
+    id: "printbloom-ecommerce-case-study",
+    date: "Sep 12, 2026",
+    title: "Case Study: PrintBloom 🌸 - Highly Personalized Gifting E-commerce Platform",
+    description: "How I built a highly scalable e-commerce platform handling heavy image processing with Next.js 15, Supabase, and Razorpay.",
+    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80",
+    content: `
+**Role:** Full-Stack Developer  
+**Platform:** Web Application (E-commerce)  
+**Live URL:** [printbloom.in](https://printbloom.in/)
+
+### Project Overview
+PrintBloom is a modern, highly personalized gifting e-commerce platform. Unlike standard online stores, PrintBloom allows customers to build custom physical products (like multi-page magazines, polaroids, and photo frames) by uploading large batches of photos, adding AI-generated captions, and managing everything through a seamless checkout process.
+
+The goal was to build a highly scalable, visually stunning, and interactive platform that handled heavy image processing on the frontend while maintaining absolute security and speed on the backend.
+
+### Tech Stack
+*   **Frontend:** Next.js 15 (App Router), React 18 (RSC), Tailwind CSS, Framer Motion.
+*   **Backend & Database:** Supabase, PostgreSQL, Supabase Auth & RLS.
+*   **Integrations & Infrastructure:** Razorpay (Payments), Cloudinary (Image Processing), Vercel (Edge functions, CI/CD).
+
+### Core Features & Implementation Details
+
+#### 1. Intelligent Product Customization Engine
+**The Challenge:** Customers needed to upload 30-40 high-resolution images for a single "Custom Magazine" order without crashing the browser or slowing down the site.
+**The Solution:**
+*   Implemented a chunked upload mechanism directly from the client to Cloudinary using unsigned presets. This bypassed my backend entirely, saving immense server bandwidth.
+*   Built a drag-and-drop UI where users can visually arrange their uploaded photos.
+*   Integrated an AI "Magic Caption" Generator that allows users to automatically generate aesthetic captions for their photos before printing.
+
+#### 2. Gamified Wallet, Referral & Loyalty System
+**The Challenge:** The client wanted a self-sustaining marketing engine where users are rewarded for bringing in new customers.
+**The Solution:**
+*   Engineered a centralized wallet system using PostgreSQL triggers and RPCs (Remote Procedure Calls) in Supabase.
+*   Automated loyalty system grants 20 points per successful order.
+*   Every user gets a unique referral link. When a new user signs up via this link and completes an order > ₹250, a Supabase trigger automatically credits 40 points to the referrer's wallet.
+*   Built server-side validation to allow users to burn wallet points seamlessly at the Razorpay checkout stage to reduce their cart total.
+
+#### 3. Secure E-commerce Pipeline
+**The Challenge:** Handling payments securely and preventing cart tampering.
+**The Solution:**
+*   Implemented a strict Server-Side Pricing Model. The frontend only sends the Product ID and Quantities. The Next.js backend recalculates the total from the secure PostgreSQL database to prevent malicious client-side price manipulation.
+*   Built a secure webhook endpoint to listen to Razorpay payment confirmations before officially marking the order as Processing in the database.
+
+#### 4. Custom Admin Dashboard & Access Control
+**The Challenge:** The client needed a way to manage the store without writing code or accessing the raw database.
+**The Solution:**
+*   Built a protected \`/admin\` route group in Next.js.
+*   Used Next.js Middleware to intercept requests. It checks the active Supabase session against a secure environment variable (\`ADMIN_EMAILS\`). If a standard user attempts to access the dashboard, they are instantly redirected, ensuring 100% security.
+*   The dashboard allows the client to perform CRUD operations on products, update order statuses, generate Promo Codes with usage limits, and view revenue analytics.
+
+### Impact & Results
+Delivered a complete, end-to-end proprietary e-commerce solution that functions as smoothly as top-tier retail platforms. The architecture is highly scalable, requires zero server maintenance from the client, and features a bespoke aesthetic design perfectly tailored to the gifting niche.
+    `
+  },
+  {
     id: "integrating-ai-fullstack",
     date: "Aug 14, 2026",
     title: "Integrating AI into Full-Stack Apps: A Practical Guide",
