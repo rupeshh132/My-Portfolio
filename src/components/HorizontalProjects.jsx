@@ -5,7 +5,7 @@ const projects = [
   {
     title: "PrintBloom",
     category: "Full-Stack E-commerce / Live Freelance Project",
-    gradient: "var(--ink)",
+    gradient: "#EAEAEA",
     image: "/assets/printbloom.png",
     link: "https://printbloom.in/"
   },
