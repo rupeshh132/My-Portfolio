@@ -37,7 +37,7 @@ const Work = () => {
           
           <a href="https://printbloom.in/" target="_blank" rel="noreferrer" className="card scroll-reveal stagger-1">
             <div className="card-img-wrapper" style={{ aspectRatio: '1.45/1', background: 'var(--ink)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '20px' }}>
-              <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80" alt="PrintBloom" className="card-mockup" />
+              <img src="/assets/printbloom.png" alt="PrintBloom" className="card-mockup" />
             </div>
             <div className="card-content" style={{ marginTop: '12px' }}>
               <h3 className="h3">PrintBloom 🌸</h3>

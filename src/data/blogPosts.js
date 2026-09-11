@@ -4,7 +4,7 @@ export const blogPosts = [
     date: "Sep 12, 2026",
     title: "Case Study: PrintBloom 🌸 - Highly Personalized Gifting E-commerce Platform",
     description: "How I built a highly scalable e-commerce platform handling heavy image processing with Next.js 15, Supabase, and Razorpay.",
-    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80",
+    image: "/assets/printbloom.png",
     content: `
 **Role:** Full-Stack Developer  
 **Platform:** Web Application (E-commerce)  
