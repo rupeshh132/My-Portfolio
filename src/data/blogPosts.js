@@ -2,7 +2,7 @@ export const blogPosts = [
   {
     id: "printbloom-ecommerce-case-study",
     date: "Sep 12, 2026",
-    title: "Case Study: PrintBloom 🌸 - Highly Personalized Gifting E-commerce Platform",
+    title: "Case Study: PrintBloom 🌸",
     description: "How I built a highly scalable e-commerce platform handling heavy image processing with Next.js 15, Supabase, and Razorpay.",
     image: "/assets/printbloom.png",
     content: `
@@ -130,7 +130,7 @@ A well-architected monolith will always outperform a poorly orchestrated microse
     date: "Sep 05, 2026",
     title: "FarmChain: Empowering Farmers with AI and Data Transparency",
     description: "My vision for an AgriTech platform that combines Machine Learning with market transparency.",
-    image: "https://images.unsplash.com/photo-1500937386664-56d1dfef4bc1?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1592982537447-6f2a6a0c5c1b?auto=format&fit=crop&w=800&q=80",
     content: `
 Technology should solve real-world problems. **FarmChain** is an AgriTech concept I am developing to bridge the information gap for farmers, ensuring they get the right advice and the right price.
 
