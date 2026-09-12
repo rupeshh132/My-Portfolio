@@ -36,11 +36,6 @@
   padding: 0;
 }
 
-html, body {
-  overflow-x: hidden;
-  max-width: 100vw;
-}
-
 html {
   font-family: 'Archivo', sans-serif;
   color: var(--ink);
