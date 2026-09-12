@@ -36,6 +36,11 @@
   padding: 0;
 }
 
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
 html {
   font-family: 'Archivo', sans-serif;
   color: var(--ink);
@@ -45,6 +50,8 @@ html {
 }
 
 body {
+  font-family: 'Archivo', sans-serif;
+  color: var(--ink);
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   position: relative;
@@ -107,15 +114,23 @@ ul { list-style: none; }
   :root {
     --gutter: 30px;
     --font-statement: 36px;
+    --font-massive: clamp(60px, 12vw, 104px);
+    --font-h1: clamp(40px, 8vw, 64px);
+    --font-h2: clamp(32px, 6vw, 48px);
+    --font-h3: clamp(24px, 4vw, 28px);
   }
   .section { padding: 80px 0; }
 }
 
-@media (max-width: 390px) {
+@media (max-width: 480px) {
   :root {
     --gutter: 20px;
     --font-statement: 28px;
-    --font-lead: 20px;
+    --font-lead: 18px;
+    --font-massive: clamp(40px, 10vw, 60px);
+    --font-h1: 36px;
+    --font-h2: 28px;
+    --font-h3: 22px;
   }
   .section { padding: 60px 0; }
 }

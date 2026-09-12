@@ -35,7 +35,7 @@ const Blog = () => {
           </p>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '40px' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', gap: '40px' }}>
           
           {blogPosts.map((post, idx) => (
             <Link to={`/blog/${post.id}`} key={post.id} className={`card scroll-reveal stagger-${(idx % 3) + 1}`} style={{ height: '460px', textDecoration: 'none' }}>

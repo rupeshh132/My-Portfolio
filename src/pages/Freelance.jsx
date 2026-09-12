@@ -84,7 +84,7 @@ const Freelance = () => {
                 borderTop: '1px solid var(--border-color)', 
                 padding: '40px 0',
                 display: 'grid',
-                gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+                gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))',
                 gap: '40px'
               }}
             >
@@ -116,7 +116,7 @@ const Freelance = () => {
               padding: '60px 40px',
               borderRadius: '4px',
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))',
               gap: '40px',
               marginTop: '40px'
             }}

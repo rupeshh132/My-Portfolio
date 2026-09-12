@@ -139,7 +139,7 @@ const Home = () => {
         <div className="container">
           <h2 className="h2 scroll-reveal" style={{ marginBottom: '60px' }}>Thoughts</h2>
           
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '40px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', gap: '40px' }}>
             
             {blogPosts.slice(0, 2).map((post, idx) => (
               <Link to={`/blog/${post.id}`} key={post.id} className={`card scroll-reveal stagger-${idx + 1}`} style={{ height: '460px', textDecoration: 'none' }}>
@@ -176,7 +176,7 @@ const Home = () => {
       {/* Contact Section */}
       <section className="section" id="contact">
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', gap: '60px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', gap: '60px' }}>
             
             <div>
               <h2 className="scroll-reveal" style={{ textAlign: 'left', fontSize: 'clamp(56px, 7vw, 96px)', fontWeight: 800, letterSpacing: '-0.04em', lineHeight: 1, marginBottom: '24px' }}>Let's talk.</h2>

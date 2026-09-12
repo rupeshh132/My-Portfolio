@@ -36,7 +36,7 @@ const Contact = () => {
     <main style={{ paddingTop: '100px', minHeight: '100vh', paddingBottom: '80px', display: 'flex', alignItems: 'center' }}>
       <div className="container" style={{ width: '100%' }}>
         
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', gap: '60px', alignItems: 'center' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', gap: '60px', alignItems: 'center' }}>
           
           <div>
             <h1 className="scroll-reveal" style={{ textAlign: 'left', fontSize: 'clamp(48px, 6vw, 96px)', fontWeight: 800, letterSpacing: '-0.04em', lineHeight: 1, marginBottom: '24px' }}>
