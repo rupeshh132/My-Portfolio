@@ -41,8 +41,8 @@ const Blog = () => {
             <Link to={`/blog/${post.id}`} key={post.id} className={`card scroll-reveal stagger-${(idx % 3) + 1}`} style={{ height: '460px', textDecoration: 'none' }}>
               <div className="card-img-wrapper" style={{ height: '100%', borderRadius: '4px' }}>
                 <img src={post.image} alt={post.title} className="card-img" style={{ filter: 'grayscale(100%)' }} />
-                <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', background: 'rgba(0,0,0,0.3)' }} />
-                <div style={{ position: 'absolute', bottom: 0, left: 0, width: '100%', padding: '40px 24px 32px', background: 'linear-gradient(transparent, rgba(17,17,17,0.95))', color: 'var(--light-text)' }}>
+                <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', background: 'rgba(0,0,0,0.6)' }} />
+                <div style={{ position: 'absolute', bottom: 0, left: 0, width: '100%', padding: '40px 24px 32px', background: 'linear-gradient(transparent, rgba(17,17,17,1))', color: 'var(--light-text)' }}>
                   <div className="small" style={{ color: 'var(--muted-light-text)', marginBottom: '8px' }}>{post.date}</div>
                   <h3 className="h3" style={{ marginBottom: '8px' }}>{post.title}</h3>
                   <p className="small" style={{ opacity: 0.8 }}>{post.description}</p>
