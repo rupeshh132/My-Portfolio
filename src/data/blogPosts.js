@@ -156,7 +156,7 @@ Building for the agriculture sector requires moving beyond flashy UI and focusin
     date: "Oct 10, 2026",
     title: "Foodies: A Modern Food Delivery Experience",
     description: "Designing and developing a seamless, interactive food delivery platform.",
-    image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80",
+    image: "/assets/foodies.png",
     content: `
 **Live URL:** [foodies-gafz.vercel.app](https://foodies-gafz.vercel.app/)
 

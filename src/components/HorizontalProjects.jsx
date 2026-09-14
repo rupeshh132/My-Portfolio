@@ -41,7 +41,7 @@ const projects = [
     title: "Foodies",
     category: "Modern Food Delivery / UI Experience",
     gradient: "#EAEAEA",
-    image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80",
+    image: "/assets/foodies.png",
     link: "https://foodies-gafz.vercel.app/"
   }
 ];
