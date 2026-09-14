@@ -7,13 +7,16 @@ import Blog from './pages/Blog';
 import BlogPost from './pages/BlogPost';
 import Contact from './pages/Contact';
 import Freelance from './pages/Freelance';
-
 import PricingBrochure from './pages/PricingBrochure';
+import { useLocation } from 'react-router-dom';
 
-function App() {
+function AppContent() {
+  const location = useLocation();
+  const isBrochure = location.pathname === '/pricing-brochure';
+
   return (
-    <Router>
-      <Navbar />
+    <>
+      {!isBrochure && <Navbar />}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/work" element={<Work />} />
@@ -23,7 +26,15 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/pricing-brochure" element={<PricingBrochure />} />
       </Routes>
-      <Footer />
+      {!isBrochure && <Footer />}
+    </>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <AppContent />
     </Router>
   );
 }
