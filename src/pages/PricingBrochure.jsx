@@ -1,6 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 const PricingBrochure = () => {
+  useEffect(() => {
+    document.body.style.backgroundColor = '#f0f0f0';
+    document.body.style.color = '#17202a';
+    return () => {
+      document.body.style.backgroundColor = '';
+      document.body.style.color = '';
+    };
+  }, []);
+
   return (
     <div className="pricing-brochure">
       {/* Page 1: Cover & Services */}

@@ -29,6 +29,19 @@
   --radius-md: 8px;
 }
 
+.pricing-brochure {
+  background-color: #f0f0f0;
+  padding: 40px 20px;
+  min-height: 100vh;
+  min-width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  font-family: "Archivo", sans-serif;
+  color: #17202A;
+}
+
 /* Reset */
 *, *::before, *::after {
   box-sizing: border-box;

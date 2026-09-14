@@ -12,7 +12,7 @@ import { useLocation } from 'react-router-dom';
 
 function AppContent() {
   const location = useLocation();
-  const isBrochure = location.pathname === '/pricing-brochure';
+  const isBrochure = location.pathname.includes('/pricing-brochure');
 
   return (
     <>
