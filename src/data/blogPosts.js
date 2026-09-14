@@ -106,6 +106,8 @@ Spring Boot remains one of the most robust frameworks for enterprise-grade appli
     description: "Why I chose a Modular Monolith over Microservices for a production-grade marketplace.",
     image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800&q=80",
     content: `
+**Live URL:** [bookmyvendor-nu.vercel.app](https://bookmyvendor-nu.vercel.app/)
+
 When building **BookMyVendor**, a comprehensive vendor booking marketplace, the immediate temptation was to use Microservices. However, for a small team launching an MVP, complexity must be earned, not assumed.
 
 ### The Modular Monolith Approach
@@ -132,6 +134,8 @@ A well-architected monolith will always outperform a poorly orchestrated microse
     description: "My vision for an AgriTech platform that combines Machine Learning with market transparency.",
     image: "https://images.unsplash.com/photo-1605000797499-95a51c5269ae?auto=format&fit=crop&w=800&q=80",
     content: `
+**Live URL:** [farmchain-snowy.vercel.app](https://farmchain-snowy.vercel.app/)
+
 Technology should solve real-world problems. **FarmChain** is an AgriTech concept I am developing to bridge the information gap for farmers, ensuring they get the right advice and the right price.
 
 ### Core Concept
@@ -145,6 +149,28 @@ The platform allows a farmer to simply input their land dimensions and soil type
 Farmers are often exploited because they lack access to real-time market rates. By aggregating government pricing and large buyer rates, FarmChain aims to create absolute transparency in the supply chain.
 
 Building for the agriculture sector requires moving beyond flashy UI and focusing on high-accuracy, highly-accessible data engineering.
+    `
+  },
+  {
+    id: "foodies-app-design",
+    date: "Oct 10, 2026",
+    title: "Foodies: A Modern Food Delivery Experience",
+    description: "Designing and developing a seamless, interactive food delivery platform.",
+    image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80",
+    content: `
+**Live URL:** [foodies-gafz.vercel.app](https://foodies-gafz.vercel.app/)
+
+Foodies is a beautifully designed, highly interactive platform aimed at revolutionizing how users discover and order their favorite meals. 
+
+### Project Overview
+The goal was to create an appetizing and fluid user interface that makes ordering food not just a task, but an experience. I focused heavily on visual hierarchy, high-quality imagery, and smooth micro-interactions that guide the user from browsing to checkout effortlessly.
+
+### Tech Stack
+*   **Frontend:** React, Tailwind CSS, Framer Motion for fluid page transitions.
+*   **Performance:** Optimized image loading and lazy-loaded components to ensure lightning-fast response times even on mobile networks.
+
+### Design Philosophy
+When it comes to food, visuals are everything. The UI uses generous whitespace, bold typography, and a warm color palette to make the food photography pop. Every button click and hover state was carefully crafted to feel tactile and responsive.
     `
   }
 ];

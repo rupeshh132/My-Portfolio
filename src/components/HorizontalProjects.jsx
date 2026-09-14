@@ -28,14 +28,21 @@ const projects = [
     category: "Marketplace / Modular Monolith",
     gradient: "#EAEAEA",
     image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800&q=80",
-    link: "#"
+    link: "https://bookmyvendor-nu.vercel.app/"
   },
   {
     title: "FarmChain",
     category: "AgriTech / ML Crop Forecasting",
     gradient: "#EAEAEA",
     image: "https://images.unsplash.com/photo-1605000797499-95a51c5269ae?auto=format&fit=crop&w=800&q=80",
-    link: "#"
+    link: "https://farmchain-snowy.vercel.app/"
+  },
+  {
+    title: "Foodies",
+    category: "Modern Food Delivery / UI Experience",
+    gradient: "#EAEAEA",
+    image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80",
+    link: "https://foodies-gafz.vercel.app/"
   }
 ];
 
