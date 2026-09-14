@@ -106,7 +106,7 @@ Spring Boot remains one of the most robust frameworks for enterprise-grade appli
     description: "Why I chose a Modular Monolith over Microservices for a production-grade marketplace.",
     image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800&q=80",
     content: `
-**Live URL:** [bookmyvendor-nu.vercel.app](https://bookmyvendor-nu.vercel.app/)
+**Live URL:** [bookmyvendor.vercel.app](https://bookmyvendor.vercel.app/)
 
 When building **BookMyVendor**, a comprehensive vendor booking marketplace, the immediate temptation was to use Microservices. However, for a small team launching an MVP, complexity must be earned, not assumed.
 
