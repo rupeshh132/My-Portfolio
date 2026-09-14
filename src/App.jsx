@@ -8,6 +8,8 @@ import BlogPost from './pages/BlogPost';
 import Contact from './pages/Contact';
 import Freelance from './pages/Freelance';
 
+import PricingBrochure from './pages/PricingBrochure';
+
 function App() {
   return (
     <Router>
@@ -19,6 +21,7 @@ function App() {
         <Route path="/blog/:id" element={<BlogPost />} />
         <Route path="/services" element={<Freelance />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/pricing-brochure" element={<PricingBrochure />} />
       </Routes>
       <Footer />
     </Router>
