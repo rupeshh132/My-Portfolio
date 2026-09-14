@@ -27,7 +27,7 @@ const projects = [
     title: "BookMyVendor",
     category: "Marketplace / Modular Monolith",
     gradient: "#EAEAEA",
-    image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800&q=80",
+    image: "/assets/bookmyvendor.png",
     link: "https://bookmyvendor.vercel.app/"
   },
   {

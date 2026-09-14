@@ -104,7 +104,7 @@ Spring Boot remains one of the most robust frameworks for enterprise-grade appli
     date: "Aug 02, 2026",
     title: "Architecting a Marketplace: The BookMyVendor Playbook",
     description: "Why I chose a Modular Monolith over Microservices for a production-grade marketplace.",
-    image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800&q=80",
+    image: "/assets/bookmyvendor.png",
     content: `
 **Live URL:** [bookmyvendor.vercel.app](https://bookmyvendor.vercel.app/)
 
