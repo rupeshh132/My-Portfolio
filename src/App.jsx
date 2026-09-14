@@ -12,7 +12,7 @@ import { useLocation } from 'react-router-dom';
 
 function AppContent() {
   const location = useLocation();
-  const isBrochure = location.pathname.includes('/pricing-brochure');
+  const isBrochure = location.pathname.includes('/pricing-brochure') || location.pathname.includes('/pricing_brochure');
 
   return (
     <>
@@ -25,6 +25,7 @@ function AppContent() {
         <Route path="/services" element={<Freelance />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/pricing-brochure" element={<PricingBrochure />} />
+        <Route path="/pricing_brochure" element={<PricingBrochure />} />
       </Routes>
       {!isBrochure && <Footer />}
     </>
