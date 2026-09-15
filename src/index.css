@@ -1000,8 +1000,8 @@ ul { list-style: none; }
   }
   
   html, body {
-    width: 210mm;
-    height: 297mm;
+    width: auto;
+    height: auto;
     background: white;
   }
 
@@ -1009,6 +1009,9 @@ ul { list-style: none; }
     background: white;
     padding: 0;
     margin: 0;
+    position: relative;
+    min-width: auto;
+    min-height: auto;
   }
 
   .a4-page {
