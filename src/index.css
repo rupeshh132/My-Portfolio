@@ -995,8 +995,8 @@ ul { list-style: none; }
 
 @media print {
   @page {
-    size: A4;
-    margin: 0;
+    size: A4 portrait;
+    margin: 15mm;
   }
   
   html, body {
@@ -1014,8 +1014,21 @@ ul { list-style: none; }
     min-height: auto;
   }
 
+  .footer-details {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    margin-top: 60px;
+    border-top: 1px solid #E5E7E9;
+    padding-top: 20px;
+  }
+
   .a4-page {
+    width: 100%;
+    height: auto;
+    min-height: auto;
     margin: 0;
+    padding: 0;
     box-shadow: none;
     border: none;
     page-break-after: always;
